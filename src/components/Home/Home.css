@@ -1,8 +1,22 @@
 
+.cadre{
+    width: 250px;
+    border: 1px solid color(srgb 1 0.647 0);
+    height: 45px;
+    background-color: rgb(78, 157, 32);  
+    border-radius: 10px;
+    display: flex; /* Utiliser flexbox */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
 
+}
+.cadre, h1{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
 
-
-
+}
 /*** Banner Section Start ***/
 .banner .banner-btn:hover {
     background: var(--bs-primary);
@@ -546,20 +560,4 @@
 }
 /*** Single Page End ***/
 
-
-/*** Footer Start ***/
-.footer .footer-item .btn-link {
-    line-height: 35px;
-    color: rgba(255, 255, 255, .5);
-    transition: 0.5s;
-}
-
-.footer .footer-item .btn-link:hover {
-    color: var(--bs-secondary) !important;
-}
-
-.footer .footer-item p.mb-4 {
-    line-height: 35px;
-}
-/*** Footer End ***/
 

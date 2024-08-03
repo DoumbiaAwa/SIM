@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+
 export default function Home() {
   return (
     <div>
@@ -26,23 +27,27 @@ export default function Home() {
             <div className="container py-5">
                 <div className="row g-5 align-items-center">
                     <div className="col-md-12 col-lg-7">
-                        <h4 className="mb-3 text-secondary">100% Organic Foods</h4>
-                        <h1 className="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
+                        <h4 className="mb-3 text-secondary">100% Agricoles</h4>
+                        <h1 className="mb-5 display-3 text-primary" style={{ fontSize: '2.5rem' }}>Soyez les premiers à connaître les dernières nouvelles.</h1>
                         <div className="position-relative mx-auto">
                             <input className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search"/>
                             <button type="submit" className="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style={{ top: '0', right: '25%' }}>Submit Now</button>
                         </div>
                     </div>
-                    <div className="col-md-12 col-lg-5">
-                        <div  className="carousel slide position-relative" data-bs-ride="carousel">
+                            <div className="col-md-12 col-lg-5">
+                        <div id="carouselId" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
                                 <div className="carousel-item active rounded">
-                                    <img  src={require('./img/hero-img-1.png')} className="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide"/>
-                                    <a href="#" className="btn px-4 py-2 text-white rounded">Fruites</a>
+                                    <img src={require('./img/Homeslide1.jpeg')} className="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Fruites</a> */}
                                 </div>
                                 <div className="carousel-item rounded">
-                                    <img src={require('./img/hero-img-2.jpg')} className="img-fluid w-100 h-100 rounded" alt="Second slide"/>
-                                    <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a>
+                                    <img src={require('./img/Homeslide2.jpeg')} className="img-fluid w-100 h-100 rounded" alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide3.jpeg')} className="img-fluid w-100 h-100 rounded" alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
                                 </div>
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -68,45 +73,45 @@ export default function Home() {
           <div className="col-md-6 col-lg-3">
             <div className="featurs-item text-center rounded bg-light p-4">
               <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-car-side fa-3x text-white"></i>
+              <i className="fas fa-chart-line fa-3x text-white"></i>
               </div>
               <div className="featurs-content text-center">
-                <h5>Free Shipping</h5>
-                <p className="mb-0">Free on order over $300</p>
+                <h5>Suivi des marchés</h5>
+                {/* <p className="mb-0">Free on order over $300</p> */}
               </div>
             </div>
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="featurs-item text-center rounded bg-light p-4">
               <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className ="fas fa-car-side fa-3x text-white"></i>
+              <i className ="fas fa-shield-alt fa-3x text-white"></i>
               </div>
               <div className="featurs-content text-center">
-                <h5>Security Payment</h5>
-                <p className="mb-0">100% security payment</p>
+                <h5>Sécurité alimentaire</h5>
+                {/* <p className="mb-0">100% security payment</p> */}
               </div>
             </div>
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="featurs-item text-center rounded bg-light p-4">
               <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className ="fas fa-car-side fa-3x text-white"></i>
+              <i className ="fas fa-seedling fa-3x text-white"></i>
               </div>
               <div className="featurs-content text-center">
-                <h5>30 Day Return</h5>
-                <p className="mb-0">30 day money guarantee</p>
+                <h5>Informations agricoles</h5>
+                {/* <p className="mb-0">30 day money guarantee</p> */}
               </div>
             </div>
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="featurs-item text-center rounded bg-light p-4">
               <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-car-side fa-3x text-white"></i>
+              <i className="fas fa-search-dollar fa-3x text-white"></i>
 
               </div>
               <div className="featurs-content text-center">
-                <h5>24/7 Support</h5>
-                <p className="mb-0">Support every time fast</p>
+                <h5>Analyse des prix</h5>
+                {/* <p className="mb-0">Support every time fast</p> */}
               </div>
             </div>
           </div>
@@ -121,7 +126,7 @@ export default function Home() {
                 <div className ="tab-class text-center">
                     <div className ="row g-4">
                         <div className ="col-lg-4 text-start">
-                            <h1>Our Organic Products</h1>
+                            <h1 className='cadre'>Produits récentes</h1>
                         </div>
                         <div className ="col-lg-8 text-end">
                             <ul className ="nav nav-pills d-inline-flex text-center mb-5">
@@ -177,7 +182,7 @@ export default function Home() {
                                         <div className="col-md-6 col-lg-4 col-xl-3">
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" className="img-fluid w-100 rounded-top" alt=""/>
+                                                    <img src={require('./img/fruite-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
                                                 <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">

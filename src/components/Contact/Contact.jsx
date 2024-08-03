@@ -9,10 +9,7 @@ export default function Contact() {
                 <div className="p-5 bg-light rounded">
                     <div className="row g-4">
                         <div className="col-12">
-                            <div className="text-center mx-auto" style= {{maxwidth: 700}}>
-                                <h1 className="text-primary">Get in touch</h1>
-                                <p className="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                            </div>
+                           
                         </div>
                         <div className="col-lg-12">
                             <div className="h-100 rounded">

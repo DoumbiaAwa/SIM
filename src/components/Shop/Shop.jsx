@@ -9,6 +9,8 @@ export default function Shop() {
 
   return (
     <div>
+        <br />
+        <br />
         {/* <!-- Fruits Shop Start--> */}
         <div className="container-fluid fruite py-5">
             <div className="container py-5">
