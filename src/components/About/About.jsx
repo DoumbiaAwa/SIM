@@ -21,7 +21,7 @@ Les principales données qui sont collectées et remontées à une fréquence he
 </div>
     {/* slider */}
        
-    <div className="col-md-12 col-lg-5" style={{position: 'absolute', top: 200, right: 0}}>
+    <div className="col-md-12 col-lg-5" style={{position: 'absolute', top: 200, right: 30}}>
                         <div id="carouselId" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
                                 <div className="carousel-item active rounded">

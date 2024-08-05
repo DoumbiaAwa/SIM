@@ -9,9 +9,11 @@ import Contact from './components/Contact/Contact';
 import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer';
 import About from './components/About/About';
+// import Entete from './components/Entete/Entete';
 function App() {
   return (
     <Router>
+      {/* <Entete /> */}
       <Navbar />
       <main className="main-content">
         <Routes>
