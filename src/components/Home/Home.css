@@ -1,25 +1,21 @@
 
-.cadre{
-    width: 250px;
-    border: 1px solid color(srgb 1 0.647 0);
-    height: 45px;
-    background-color: rgb(78, 157, 32);  
-    border-radius: 10px;
-    display: flex; /* Utiliser flexbox */
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
-
-}
-.cadre, h1{
-    font-size: 20px;
-    color: white;
+.bg-color{
+    background-color: red;
     font-weight: 700;
-    text-align: center;
-
 }
+
 /*** Banner Section Start ***/
 .banner .banner-btn:hover {
     background: var(--bs-primary);
+}
+.custom-slider-height {
+    height: 100px; /* Ajustez cette valeur selon vos besoins */
+    object-fit: cover; /* Cette propriété permet de redimensionner l'image pour qu'elle couvre entièrement le conteneur tout en gardant ses proportions */
+}
+
+
+.bg-grise{
+    background-color: rgb(148, 148, 148);
 }
 /*** Banner Section End ***/
 

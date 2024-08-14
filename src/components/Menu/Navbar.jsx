@@ -10,12 +10,8 @@ export default function Navbar() {
         {/* <!-- Navbar start --> */}
        
 <div className="container-fluid fixed-top">
-<div className="drapeau">
-        <div className="rouge"></div>
-        <div className="jaune"></div>
-        <div className="vert"></div>
-</div>
-            <div className="container topbar bg-primary d-none d-lg-block" style={{height:40}}>
+
+            <div className="container topbar bg-primary d-none d-lg-block" style={{height:40,}}>
 
                 <div className="d-flex justify-content-between">
                     <div >                
@@ -34,10 +30,10 @@ export default function Navbar() {
                     </button> */}
                     <div className="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <nav className="navbar-nav mx-auto">
-                        <NavLink to="/" exact className="nav-item nav-link" activeClassName="active">Accueil</NavLink>
+                        <NavLink to="/home" exact className="nav-item nav-link" activeClassName="active">Accueil</NavLink>
                          <NavLink to="/shop" className="nav-item nav-link" activeClassName="active">Produits</NavLink>
                           <NavLink to="/contact" className="nav-item nav-link" activeClassName="active">Contact</NavLink>
-                          <NavLink to="/about" className="nav-item nav-link" activeClassName="active">A Propos</NavLink>
+                          <NavLink to="/about" className="nav-item nav-link" activeClassName="active">À propos</NavLink>
 
                         </nav>
                         <img src={require('./ANASA.jfif')} style={{width:100}} alt="logo"/>

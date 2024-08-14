@@ -67,55 +67,120 @@ export default function Home() {
 
 
         {/* <!-- Featurs Section Start --> */}
-        <div className="container-fluid featurs py-5">
-      <div className="container py-5">
-        <div className="row g-4">
-          <div className="col-md-6 col-lg-3">
-            <div className="featurs-item text-center rounded bg-light p-4">
-              <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-chart-line fa-3x text-white"></i>
-              </div>
-              <div className="featurs-content text-center">
-                <h5>Suivi des marchés</h5>
-                {/* <p className="mb-0">Free on order over $300</p> */}
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-3">
-            <div className="featurs-item text-center rounded bg-light p-4">
-              <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className ="fas fa-shield-alt fa-3x text-white"></i>
-              </div>
-              <div className="featurs-content text-center">
-                <h5>Sécurité alimentaire</h5>
-                {/* <p className="mb-0">100% security payment</p> */}
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-3">
-            <div className="featurs-item text-center rounded bg-light p-4">
-              <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className ="fas fa-seedling fa-3x text-white"></i>
-              </div>
-              <div className="featurs-content text-center">
-                <h5>Informations agricoles</h5>
-                {/* <p className="mb-0">30 day money guarantee</p> */}
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-3">
-            <div className="featurs-item text-center rounded bg-light p-4">
-              <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-search-dollar fa-3x text-white"></i>
+     <div className="container-fluid featurs py-5">
 
-              </div>
-              <div className="featurs-content text-center">
-                <h5>Analyse des prix</h5>
-                {/* <p className="mb-0">Support every time fast</p> */}
-              </div>
+      <div className="container py-5">
+      <button type="button" class="btn btn-danger">Découvrez nos Catégories de produits</button>
+        {/* <br/>
+        <br /> */}
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style={{marginTop: 60}}>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 1</h5>
             </div>
           </div>
         </div>
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 3</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 4</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {/* <!-- Répétez les blocs pour chaque groupe de 4 cartes --> */}
+    <div class="carousel-item">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 5</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 6</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 7</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featurs-item text-center rounded bg-light p-4">
+            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+              <i className="fas fa-seedling fa-3x text-white"></i>
+            </div>
+            <div className="featurs-content text-center">
+              <h5>Catégorie SIM 8</h5>
+            </div>
+          </div>
+        </div>
+        {/* <!-- Autres cartes... --> */}
+      </div>
+    </div>
+  </div>
+  
+  {/* <!-- Contrôles du slider --> */}
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Précédent</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Suivant</span>
+  </button>
+</div>
+
+        
       </div>
     </div>
     {/* <!-- Featurs Section End --> */}
@@ -126,7 +191,7 @@ export default function Home() {
                 <div className ="tab-class text-center">
                     <div className ="row g-4">
                         <div className ="col-lg-4 text-start">
-                            <h1 className='cadre'>Produits récentes</h1>
+                            <button type="button" class="btn btn-success">Produits récentes</button>
                         </div>
                         <div className ="col-lg-8 text-end">
                             <ul className ="nav nav-pills d-inline-flex text-center mb-5">
@@ -168,13 +233,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img  src={require('./img/fruite-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -184,13 +249,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img src={require('./img/fruite-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -200,13 +265,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img  src={require ('./img/fruite-item-2.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Raspberries</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -216,13 +281,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img src={require ('./img/fruite-item-4.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Apricots</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -232,13 +297,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img src={require ('./img/fruite-item-2.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style= {{top: 10, left: 10}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Banana</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -248,13 +313,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img src={require ('./img/fruite-item-2.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: 10, left: 10,}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style={{top: 10, left: 10,}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Oranges</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -264,13 +329,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img src={require ('./img/fruite-item-2.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: 10, left: 10,}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style={{top: 10, left: 10,}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Raspberries</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -280,13 +345,13 @@ export default function Home() {
                                                 <div className="fruite-img">
                                                     <img src={require ('./img/fruite-item-2.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
                                                 </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: 10, left: 10,}}>Fruits</div>
+                                                <div className="text-white bg-color px-3 py-1 rounded position-absolute" style={{top: 10, left: 10,}}>Fruits</div>
                                                 <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -310,7 +375,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -326,7 +391,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -350,7 +415,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -366,7 +431,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -390,7 +455,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -406,7 +471,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -430,7 +495,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -446,7 +511,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -462,7 +527,7 @@ export default function Home() {
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
                                                         <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -482,27 +547,16 @@ export default function Home() {
     <div className="container-fluid service py-5">
             <div className="container py-5">
                 <div className="row g-4 justify-content-center">
+                    
+                    
                     <div className="col-md-6 col-lg-4">
                         <a href="#">
-                            <div className="service-item bg-secondary rounded border border-secondary">
-                                <img  src={require ('./img/featur-1.jpg')} className="img-fluid rounded-top w-100" alt=""/>
+                            <div className="service-item bg-primary rounded border border-primary">
+                                <img src={require ('./img/featur-3.jpg')} className="img-fluid rounded-top w-100" alt=""/>
                                 <div className="px-4 rounded-bottom">
-                                    <div className="service-content bg-primary text-center p-4 rounded">
-                                        <h5 className="text-white">Fresh Apples</h5>
-                                        <h3 className="mb-0">20% OFF</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div className="service-item bg-dark rounded border border-dark">
-                                <img src={require ('./img/featur-2.jpg')} className="img-fluid rounded-top w-100" alt=""/>
-                                <div className="px-4 rounded-bottom">
-                                    <div className="service-content bg-light text-center p-4 rounded">
-                                        <h5 className="text-primary">Tasty Fruits</h5>
-                                        <h3 className="mb-0">Free delivery</h3>
+                                    <div className="service-content bg-secondary text-center p-4 rounded">
+                                        <h5 className="text-white">Légumes</h5>
+                                        <h3 className="mb-0">1000cfa</h3>
                                     </div>
                                 </div>
                             </div>
@@ -514,169 +568,59 @@ export default function Home() {
                                 <img src={require ('./img/featur-3.jpg')} className="img-fluid rounded-top w-100" alt=""/>
                                 <div className="px-4 rounded-bottom">
                                     <div className="service-content bg-secondary text-center p-4 rounded">
-                                        <h5 className="text-white">Exotic Vegitable</h5>
-                                        <h3 className="mb-0">Discount 30$</h3>
+                                        <h5 className="text-white">Légumes</h5>
+                                        <h3 className="mb-0">1000cfa</h3>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
+                    <div className="col-md-6 col-lg-4">
+                        <a href="#">
+                            <div className="service-item bg-primary rounded border border-primary">
+                                <img src={require ('./img/featur-3.jpg')} className="img-fluid rounded-top w-100" alt=""/>
+                                <div className="px-4 rounded-bottom">
+                                    <div className="service-content bg-secondary text-center p-4 rounded">
+                                        <h5 className="text-white">Légumes</h5>
+                                        <h3 className="mb-0">1000cfa</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
         {/* <!-- Featurs End --> */}
 
-        {/* <!-- Vesitable Shop Start--> */}
-        <div className="container-fluid vesitable py-5">
-            <div className="container py-5">
-                <h1 className="mb-0">Fresh Organic Vegetables</h1>
-                <div className="owl-carousel vegetable-carousel justify-content-center">
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style={{top: 10, right: 10,}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-1.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10,}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top bg-light" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Banana</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-4.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10,}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Bell Papper</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style={{top: 10, right: 10,}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Potatoes</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style={{top: 10, right: 10,}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style={{top: 10, right: 10,}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Potatoes</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border border-primary rounded position-relative vesitable-item">
-                        <div className="vesitable-img">
-                            <img src={require ('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
-                        </div>
-                        <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style={{top: 10, right: 10,}}>Vegetable</div>
-                        <div className="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div className="d-flex justify-content-between flex-lg-wrap">
-                                <p className="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Vesitable Shop End --> */}
 
         {/* <!-- Banner Section Start--> */}
-        <div className="container-fluid banner bg-secondary my-5">
-            <div className="container py-5">
-                <div className="row g-4 align-items-center">
-                    <div className="col-lg-6">
-                        <div className="py-4">
-                            <h1 className="display-3 text-white">Fresh Exotic Fruits</h1>
-                            <p className="fw-normal display-3 text-dark mb-4">in Our Store</p>
-                            <p className="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                            <a href="#" className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="position-relative">
-                            <img  src={require ('./img/baner-1.png')} className="img-fluid w-100 rounded" alt=""/>
-                            <div className="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style= {{width: 140, height: 140, top: 0, left: 0}}>
-                                <h1 style= {{fontsize: 100}}>1</h1>
-                                <div className="d-flex flex-column">
-                                    <span className="h2 mb-0">50$</span>
-                                    <span className="h4 text-muted mb-0">kg</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img  src={require ('./img/best-product-4.jpg')} className="img-fluid rounded-top w-50" alt="..."/>
+      <div className="carousel-caption d-none d-md-block">
+        <h5>Nom Boutique</h5>
+        <p>...</p>
+      </div>
+    </div>
+    {/* Ajoutez d'autres items ici */}
+  </div>
+  
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
         {/* <!-- Banner Section End --> */}
 
+       
         {/* <!-- Bestsaler Product Start --> */}
         <div className="container-fluid py-5">
             <div className="container py-5">
@@ -701,7 +645,7 @@ export default function Home() {
                                         <i className="fas fa-star"></i>
                                     </div>
                                     <h4 className="mb-3">3.12 $</h4>
-                                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
@@ -722,7 +666,7 @@ export default function Home() {
                                         <i className="fas fa-star"></i>
                                     </div>
                                     <h4 className="mb-3">3.12 $</h4>
-                                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
@@ -743,7 +687,7 @@ export default function Home() {
                                         <i className="fas fa-star"></i>
                                     </div>
                                     <h4 className="mb-3">3.12 $</h4>
-                                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
@@ -764,7 +708,7 @@ export default function Home() {
                                         <i className="fas fa-star"></i>
                                     </div>
                                     <h4 className="mb-3">3.12 $</h4>
-                                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
@@ -785,7 +729,7 @@ export default function Home() {
                                         <i className="fas fa-star"></i>
                                     </div>
                                     <h4 className="mb-3">3.12 $</h4>
-                                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
@@ -806,7 +750,7 @@ export default function Home() {
                                         <i className="fas fa-star"></i>
                                     </div>
                                     <h4 className="mb-3">3.12 $</h4>
-                                    <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
@@ -824,7 +768,7 @@ export default function Home() {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <h4 className="mb-3">3.12 $</h4>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                             </div>
                         </div>
                     </div>
@@ -841,7 +785,7 @@ export default function Home() {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <h4 className="mb-3">3.12 $</h4>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                             </div>
                         </div>
                     </div>
@@ -858,7 +802,7 @@ export default function Home() {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <h4 className="mb-3">3.12 $</h4>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                             </div>
                         </div>
                     </div>
@@ -875,7 +819,7 @@ export default function Home() {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <h4 className="mb-3">3.12 $</h4>
-                                <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                             </div>
                         </div>
                     </div>
