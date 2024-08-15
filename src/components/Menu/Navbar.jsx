@@ -15,7 +15,7 @@ export default function Navbar() {
 
                 <div className="d-flex justify-content-between">
                     <div >                
-                        <h1 className="sim">Système d'Information sur les marchés en Guinée</h1>
+                        <h1 className="sim">Système d'Information sur les Marchés en Guinée</h1>
                     </div>
 
                 </div>
@@ -43,10 +43,12 @@ export default function Navbar() {
             </div>
         </div>
         {/* <!-- Navbar End --> */}
-
-
-
-
+<Link to="/marche" style={{ textDecoration: 'none', color: 'inherit' }}>
+<a href="#" className="floating-button">
+        <i className="fa fa-store"></i> Voir Marché
+        </a>
+</Link>
+      
 
       
    </header>

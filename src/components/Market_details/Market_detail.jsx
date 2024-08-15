@@ -1,50 +1,89 @@
-import React from 'react';
-import './Shop.css';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import GoogleMapReact from 'google-map-react';
 
-export default function Shop() {
 
-    
-
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+export default function Market_detail() {
+    const defaultProps = {
+        center: {
+          lat: 10.99835602,
+          lng: 77.01502627
+        },
+        zoom: 11
+      };
   return (
-    <div>
-        <br />
-        <br />
-        <br />
-        <br />
-        {/* <!-- Fruits Shop Start--> */}
-        <div className="container-fluid fruite py-5">
+    <div style={{marginTop: 150}}>
+ <div className="container-fluid  py-5 mt-5" style={{ background: 'linear-gradient(rgba(54, 159, 74, 0.7), rgba(255, 255, 255, 0.7))'}}>
+    <div className="container py-9">
+        <div className="row g-8 mb-9">
+            <div className="col-lg-12 col-xl-12">
+                <div className="row g-8 align-items-center">
+                    <div className="col-lg-7">
+                        <br />
+                        <div className="border rounded">
+                            <div style={{ height: '70vh', width: '100%' }}>
+                                <GoogleMapReact
+                                    bootstrapURLKeys={{ key: "" }}
+                                    defaultCenter={{lat: 9.9456, lng: -9.6966}}
+                                    defaultZoom={defaultProps.zoom}
+                                >
+                                    <AnyReactComponent
+                                        lat={59.955413}
+                                        lng={30.337844}
+                                        text="My Marker"
+                                    />
+                                </GoogleMapReact>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-5 text-start">
+                        <h4 className="fw-bold mb-3">Nom</h4>
+                        <p className="mb-3">Category: Vegetables</p>
+                        {/* <h5 className="fw-bold mb-3">300 cfa</h5> */}
+                        <p className="mb-4">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
+                        <p className="mb-4">Suspendisse ultricies nisi vel quam suscipit. Sabertooth peacock flounder; chain pickerel hatchetfish, pencilfish snailfish.</p>
+                        <a href="#" className="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
+                            <i className="fa fa-shopping-bag me-2 text-primary"></i> Voir produits
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       </div>
+<div className="container-fluid fruite py-5">
+
             <div className="container py-5">
-                <h1 className="mb-4">Fresh fruits shop</h1>
+                {/* <h1 className="mb-4">Fresh fruits shop</h1> */}
                 <div className="row g-4">
                     <div className="col-lg-12">
-                        <div className="row g-4">
+                        <br />
+                        <br />
+                        <div className="row g-6">
                             <div className="col-xl-3">
                                 <div className="input-group w-100 mx-auto d-flex">
                                     <input type="search" className="form-control p-3" placeholder="Rechercher" aria-describedby="search-icon-1"/>
                                     <span id="search-icon-1" className="input-group-text p-3"><i className="fa fa-search"></i></span>
                                 </div>
                             </div>
-                            <div className="col-6"></div>
-                            <div className="col-xl-3">
-                                {/* <div className="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
-                                    <label for="fruits">Default Sorting:</label>
-                                    <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3" form="fruitform">
-                                        <option value="volvo">Nothing</option>
-                                        <option value="saab">Popularity</option>
-                                        <option value="opel">Organic</option>
-                                        <option value="audi">Fantastic</option>
-                                    </select>
-                                </div> */}
-                            </div>
+                            <div class="col-md-9">
+                {/* <!-- Search Bar --> */}
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for items..." aria-label="Search"/>
+                    <button class="btn btn-primary" type="button">Rechercher</button>
+                </div>
+            </div>
+                            
                         </div>
+
+                        
                         <div className="row g-4">
                             <div className="col-lg-3">
                                 <div className="row g-4">
+
                                     <div className="col-lg-12">
                                         <div className="mb-3">
-                                            <h4>Categories</h4>
+                                            {/* <h4>Categories</h4> */}
                                             <ul className="list-unstyled fruite-categorie">
                                                 <li>
                                                     <div className="d-flex justify-content-between fruite-name">
@@ -88,7 +127,6 @@ export default function Shop() {
                                 
                                 <div className="row g-4 justify-content-center">
                                     <div className="col-md-6 col-lg-6 col-xl-4" >
-                                    <Link to="/detail" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <div className="rouned position-relative fruite-item">
                                             <div className="fruite-img">
                                                 <img  src={require('./img/fruite-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
@@ -103,7 +141,6 @@ export default function Shop() {
                                                 </div>
                                             </div>
                                         </div>
-                                        </Link>
                                     </div>
                                     <div className="col-md-6 col-lg-6 col-xl-4">
                                         <div className="rounded position-relative fruite-item">
@@ -252,7 +289,6 @@ export default function Shop() {
                 </div>
             </div>
         </div>
-        {/* <!-- Fruits Shop End--> */}
     </div>
   )
 }

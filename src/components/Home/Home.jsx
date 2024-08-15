@@ -1,9 +1,9 @@
 import React from 'react';
 import './Home.css';
-
+import { Link } from 'react-router-dom';
 export default function Home() {
   return (
-    <div>
+    <div style={{marginBottom: '200px'}}>
        {/* /* <!-- Modal Search Start --> */} */
         <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-fullscreen">
@@ -70,17 +70,17 @@ export default function Home() {
      <div className="container-fluid featurs py-5">
 
       <div className="container py-5">
-      <button type="button" class="btn btn-danger">Découvrez nos Catégories de produits</button>
+      <button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
         {/* <br/>
         <br /> */}
 
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style={{marginTop: 60}}>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row g-4">
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{marginTop: 60}}>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <div className="row g-4">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -88,9 +88,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -98,9 +98,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -108,9 +108,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -122,11 +122,11 @@ export default function Home() {
     </div>
     
     {/* <!-- Répétez les blocs pour chaque groupe de 4 cartes --> */}
-    <div class="carousel-item">
-      <div class="row g-4">
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+    <div className="carousel-item">
+      <div className="row g-4">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -134,9 +134,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -144,9 +144,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -154,9 +154,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="featurs-item text-center rounded bg-light p-4">
-            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+        <div className="col-md-3">
+          <div className="featurs-item text-center rounded bg-light p-4">
+            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
             <div className="featurs-content text-center">
@@ -170,13 +170,13 @@ export default function Home() {
   </div>
   
   {/* <!-- Contrôles du slider --> */}
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Précédent</span>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Précédent</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Suivant</span>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Suivant</span>
   </button>
 </div>
 
@@ -191,7 +191,7 @@ export default function Home() {
                 <div className ="tab-class text-center">
                     <div className ="row g-4">
                         <div className ="col-lg-4 text-start">
-                            <button type="button" class="btn btn-success">Produits récentes</button>
+                            <button type="button" className="btn btn-success">Produits récentes</button>
                         </div>
                         <div className ="col-lg-8 text-end">
                             <ul className ="nav nav-pills d-inline-flex text-center mb-5">
@@ -596,37 +596,45 @@ export default function Home() {
 
 
         {/* <!-- Banner Section Start--> */}
-        <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img  src={require ('./img/best-product-4.jpg')} className="img-fluid rounded-top w-50" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Nom Boutique</h5>
-        <p>...</p>
-      </div>
-    </div>
-    {/* Ajoutez d'autres items ici */}
-  </div>
-  
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-
+        <div className="container-fluid banner bg-secondary my-5 ">
+            {/* <div className="container "> */}
+                <div className="row g-4 align-items-center">
+                    <div className="col-lg-9">
+                        <div className="py-6">
+                            <h1 className="display-3 text-white" style={{fontSize:50}}>Se perdre dans les allées du marché</h1>
+                            <p className="fw-normal display-3 text-dark mb-4" style={{fontSize:50}}>Pour découvrir les trésors cachés de chaque boutique.</p>
+                            {/* <p className="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p> */}
+                            <Link to="/marche" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <a href="#" className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">Explorer</a>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="col-lg-3">
+                        <div className="position-relative">
+                            <img  src={require ('./img/baner-1.png')} className="img-fluid w-90 rounded" alt=""/>
+                            {/* <div className="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style= {{width: 140, height: 140, top: 0, left: 0}}>
+                                <h1 style= {{fontSize: 100}}>1</h1>
+                                <div className="d-flex flex-column">
+                                    <span className="h2 mb-0">50$</span>
+                                    <span className="h4 text-muted mb-0">kg</span>
+                                </div>
+                            </div> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {/* </div> */}
         {/* <!-- Banner Section End --> */}
+
+
 
        
         {/* <!-- Bestsaler Product Start --> */}
         <div className="container-fluid py-5">
             <div className="container py-5">
-                <div className="text-center mx-auto mb-5" style= {{maxwidth: 700}}>
-                    <h1 className="display-4">Bestseller Products</h1>
-                    <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                <div className="text-center mx-auto mb-5" style= {{maxwidth: 1000}}>
+                    <h1 className="display-6">Découvrez les produits phares du moment</h1>
+                    {/* <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p> */}
                 </div>
                 <div className="row g-4">
                     <div className="col-lg-6 col-xl-4">
@@ -637,13 +645,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
-                                    <div className="d-flex my-3">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
+                                   
                                     <h4 className="mb-3">3.12 $</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
@@ -658,13 +660,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
-                                    <div className="d-flex my-3">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
+                                    
                                     <h4 className="mb-3">3.12 $</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
@@ -679,13 +675,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
-                                    <div className="d-flex my-3">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
+                                    
                                     <h4 className="mb-3">3.12 $</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
@@ -700,13 +690,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
-                                    <div className="d-flex my-3">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
+                                   
                                     <h4 className="mb-3">3.12 $</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
@@ -721,13 +705,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
-                                    <div className="d-flex my-3">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
+                                    
                                     <h4 className="mb-3">3.12 $</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
@@ -742,94 +720,25 @@ export default function Home() {
                                 </div>
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
-                                    <div className="d-flex my-3">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
+                                   
+                                   
                                     <h4 className="mb-3">3.12 $</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 col-lg-6 col-xl-3">
-                        <div className="text-center">
-                            <img  src={require ('./img/fruite-item-1.jpg')}className="img-fluid rounded" alt=""/>
-                            <div className="py-4">
-                                <a href="#" className="h5">Organic Tomato</a>
-                                <div className="d-flex my-3 justify-content-center">
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star"></i>
-                                </div>
-                                <h4 className="mb-3">3.12 $</h4>
-                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-6 col-xl-3">
-                        <div className="text-center">
-                            <img src={require ('./img/fruite-item-2.jpg')} className="img-fluid rounded" alt=""/>
-                            <div className="py-4">
-                                <a href="#" className="h5">Organic Tomato</a>
-                                <div className="d-flex my-3 justify-content-center">
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star"></i>
-                                </div>
-                                <h4 className="mb-3">3.12 $</h4>
-                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-6 col-xl-3">
-                        <div className="text-center">
-                            <img src={require ('./img/fruite-item-3.jpg')} className="img-fluid rounded" alt=""/>
-                            <div className="py-4">
-                                <a href="#" className="h5">Organic Tomato</a>
-                                <div className="d-flex my-3 justify-content-center">
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star"></i>
-                                </div>
-                                <h4 className="mb-3">3.12 $</h4>
-                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-6 col-xl-3">
-                        <div className="text-center">
-                            <img src={require ('./img/fruite-item-4.jpg')} className="img-fluid rounded" alt=""/>
-                            <div className="py-2">
-                                <a href="#" className="h5">Organic Tomato</a>
-                                <div className="d-flex my-3 justify-content-center">
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star text-primary"></i>
-                                    <i className="fas fa-star"></i>
-                                </div>
-                                <h4 className="mb-3">3.12 $</h4>
-                                {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                            </div>
-                        </div>
-                    </div>
+                  
+                   
+                    
+                  
                 </div>
             </div>
         </div>
         {/* <!-- Bestsaler Product End --> */}
 
         {/* <!-- Fact Start --> */}
-        <div className="container-fluid py-5">
+        {/* <div className="container-fluid py-5">
             <div className="container">
                 <div className="bg-light p-5 rounded">
                     <div className="row g-4 justify-content-center">
@@ -864,12 +773,12 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         {/* <!-- Fact Start --> */}
 
 
         {/* <!-- Tastimonial Start --> */}
-        <div className="container-fluid testimonial py-5">
+        {/* <div className="container-fluid testimonial py-5">
             <div className="container py-5">
                 <div className="testimonial-header text-center">
                     <h4 className="text-primary">Our Testimonial</h4>
@@ -953,7 +862,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         {/* <!-- Tastimonial End --> */}
 
       

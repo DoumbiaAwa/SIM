@@ -9,6 +9,8 @@ import About from './components/About/About';
 import Login from './components/Login/Login';
 import Shop from './components/Shop/Shop';
 import Shop_details from './components/Shop/Shop_details/Shop_details';
+import Marche from './components/Marche/Marche';
+import Market_detail from './components/Market_details/Market_detail';
 
 function App() {
   return (
@@ -47,6 +49,20 @@ function App() {
           <>
             <Navbar />
             <About />
+            <Footer />
+          </>
+        } />
+         <Route path="/marche" element={
+          <>
+            <Navbar />
+            <Marche />
+            <Footer />
+          </>
+        } />
+         <Route path="/marche-details" element={
+          <>
+            <Navbar />
+            <Market_detail />
             <Footer />
           </>
         } />
