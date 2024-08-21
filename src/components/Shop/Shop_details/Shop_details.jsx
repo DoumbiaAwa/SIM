@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Shop_details() {
   return (
-    <div>
+    <div style={{marginTop: 150}}>
       
       {/* <!-- Single Product Start --> */}
         <div className="container-fluid py-5 mt-5">

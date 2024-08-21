@@ -23,11 +23,11 @@ export default function Home() {
         </div>
         {/* <!-- Modal Search End --> */}
 {/* <!-- Hero Start --> */}
-        <div className="container-fluid py-5 mb-5 hero-header">
+        <div className="container-fluid py-5 mb-5 hero-header" style={{ maxWidth: '100%' }}>
             <div className="container py-5">
                 <div className="row g-5 align-items-center">
                     <div className="col-md-12 col-lg-7">
-                        <h4 className="mb-3 text-secondary">100% Agricoles</h4>
+                        <h4 className="mb-3 text">100% Agro-pastoral</h4>
                         <h1 className="mb-5 display-3 text-primary" style={{ fontSize: '2.5rem',textAlign: 'left' }}>Soyez les premiers à connaître les dernières nouvelles.</h1>
                         <div className="position-relative mx-auto">
                             <input className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search"/>
@@ -38,15 +38,43 @@ export default function Home() {
                         <div id="carouselId" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
                                 <div className="carousel-item active rounded">
-                                    <img src={require('./img/Homeslide1.jpeg')} className="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide"/>
+                                    <img src={require('./img/Homeslide1.jpeg')} className="img-fluid w-100 bg-secondary rounded" style={{ height: '250px' }} alt="First slide"/>
                                     {/* <a href="#" className="btn px-4 py-2 text-white rounded">Fruites</a> */}
                                 </div>
                                 <div className="carousel-item rounded">
-                                    <img src={require('./img/Homeslide2.jpeg')} className="img-fluid w-100 h-100 rounded" alt="Second slide"/>
+                                    <img src={require('./img/Homeslide2.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
                                     {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
                                 </div>
                                 <div className="carousel-item rounded">
-                                    <img src={require('./img/Homeslide3.jpeg')} className="img-fluid w-100 h-100 rounded" alt="Second slide"/>
+                                    <img src={require('./img/Homeslide3.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide4.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide5.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide6.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide7.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide8.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide9.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
+                                    {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
+                                </div>
+                                <div className="carousel-item rounded">
+                                    <img src={require('./img/Homeslide10.jpeg')} className="img-fluid w-100 rounded" style={{ height: '250px' }} alt="Second slide"/>
                                     {/* <a href="#" className="btn px-4 py-2 text-white rounded">Vesitables</a> */}
                                 </div>
                             </div>
@@ -70,16 +98,15 @@ export default function Home() {
      <div className="container-fluid featurs py-5">
 
       <div className="container py-5">
-      <button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
-        {/* <br/>
-        <br /> */}
-
-<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{marginTop: 60}}>
+<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{marginTop: 10}}>
+<button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
+<br />
+<br />
   <div className="carousel-inner">
     <div className="carousel-item active">
       <div className="row g-4">
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -89,7 +116,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -99,7 +126,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -109,7 +136,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -125,7 +152,7 @@ export default function Home() {
     <div className="carousel-item">
       <div className="row g-4">
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -135,7 +162,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -145,7 +172,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -155,7 +182,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-light p-4">
+          <div className="featurs-item text-center rounded bg-vert p-4">
             <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
             </div>
@@ -196,27 +223,27 @@ export default function Home() {
                         <div className ="col-lg-8 text-end">
                             <ul className ="nav nav-pills d-inline-flex text-center mb-5">
                                 <li className ="nav-item">
-                                    <a className ="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                                    <a className ="d-flex m-2 py-2 bg-vert rounded-pill active" data-bs-toggle="pill" href="#tab-1">
                                         <span className ="text-dark" style= {{width: 130}}> All Products</span>
                                     </a>
                                 </li>
                                 <li className ="nav-item">
-                                    <a className ="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                                    <a className ="d-flex py-2 m-2 bg-vert rounded-pill" data-bs-toggle="pill" href="#tab-2">
                                         <span className ="text-dark" style= {{width: 130}}>Vegetables</span>
                                     </a>
                                 </li>
                                 <li className ="nav-item">
-                                    <a className ="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                                    <a className ="d-flex m-2 py-2 bg-vert rounded-pill" data-bs-toggle="pill" href="#tab-3">
                                         <span className ="text-dark" style= {{width: 130}}>Fruits</span>
                                     </a>
                                 </li>
                                 <li className ="nav-item">
-                                    <a className ="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
+                                    <a className ="d-flex m-2 py-2 bg-vert rounded-pill" data-bs-toggle="pill" href="#tab-4">
                                         <span className ="text-dark" style = {{width: 130}}>Bread</span>
                                     </a>
                                 </li>
                                 <li className ="nav-item">
-                                    <a className ="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
+                                    <a className ="d-flex m-2 py-2 bg-vert rounded-pill" data-bs-toggle="pill" href="#tab-5">
                                         <span className ="text-dark" style=  {{width: 130}}>Meat</span>
                                     </a>
                                 </li>
@@ -238,7 +265,7 @@ export default function Home() {
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -254,7 +281,7 @@ export default function Home() {
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -270,7 +297,7 @@ export default function Home() {
                                                     <h4>Raspberries</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -286,7 +313,7 @@ export default function Home() {
                                                     <h4>Apricots</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -302,7 +329,7 @@ export default function Home() {
                                                     <h4>Banana</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -318,7 +345,7 @@ export default function Home() {
                                                     <h4>Oranges</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -334,7 +361,7 @@ export default function Home() {
                                                     <h4>Raspberries</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -350,7 +377,7 @@ export default function Home() {
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -374,7 +401,7 @@ export default function Home() {
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -390,7 +417,7 @@ export default function Home() {
                                                     <h4>Raspberries</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -414,7 +441,7 @@ export default function Home() {
                                                     <h4>Oranges</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -430,7 +457,7 @@ export default function Home() {
                                                     <h4>Apple</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -454,7 +481,7 @@ export default function Home() {
                                                     <h4>Grapes</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -470,7 +497,7 @@ export default function Home() {
                                                     <h4>Apricots</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -494,7 +521,7 @@ export default function Home() {
                                                     <h4>Banana</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -510,7 +537,7 @@ export default function Home() {
                                                     <h4>Raspberries</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -526,7 +553,7 @@ export default function Home() {
                                                     <h4>Oranges</h4>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <p className="text-dark fs-5 fw-bold mb-0">1000 GNF / kg</p>
                                                         {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                     </div>
                                                 </div>
@@ -556,7 +583,7 @@ export default function Home() {
                                 <div className="px-4 rounded-bottom">
                                     <div className="service-content bg-secondary text-center p-4 rounded">
                                         <h5 className="text-white">Légumes</h5>
-                                        <h3 className="mb-0">1000cfa</h3>
+                                        <h3 className="mb-0">500 GNF</h3>
                                     </div>
                                 </div>
                             </div>
@@ -569,7 +596,7 @@ export default function Home() {
                                 <div className="px-4 rounded-bottom">
                                     <div className="service-content bg-secondary text-center p-4 rounded">
                                         <h5 className="text-white">Légumes</h5>
-                                        <h3 className="mb-0">1000cfa</h3>
+                                        <h3 className="mb-0">500 GNF</h3>
                                     </div>
                                 </div>
                             </div>
@@ -582,7 +609,7 @@ export default function Home() {
                                 <div className="px-4 rounded-bottom">
                                     <div className="service-content bg-secondary text-center p-4 rounded">
                                         <h5 className="text-white">Légumes</h5>
-                                        <h3 className="mb-0">1000cfa</h3>
+                                        <h3 className="mb-0">500 GNF</h3>
                                     </div>
                                 </div>
                             </div>
@@ -630,15 +657,16 @@ export default function Home() {
 
        
         {/* <!-- Bestsaler Product Start --> */}
-        <div className="container-fluid py-5">
+        <div className="container-fluid py-5" style={{marginTop: 60}}>
             <div className="container py-5">
                 <div className="text-center mx-auto mb-5" style= {{maxwidth: 1000}}>
                     <h1 className="display-6">Découvrez les produits phares du moment</h1>
                     {/* <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p> */}
                 </div>
-                <div className="row g-4">
+               <br />
+                <div className="row g-4" >
                     <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-light">
+                        <div className="p-4 rounded bg-vert">
                             <div className="row align-items-center">
                                 <div className="col-6">
                                     <img src={require ('./img/best-product-1.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
@@ -646,14 +674,14 @@ export default function Home() {
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
                                    
-                                    <h4 className="mb-3">3.12 $</h4>
+                                    <h4 className="mb-3">300 GNF</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-light">
+                        <div className="p-4 rounded bg-vert">
                             <div className="row align-items-center">
                                 <div className="col-6">
                                     <img src={require ('./img/best-product-2.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
@@ -661,14 +689,14 @@ export default function Home() {
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
                                     
-                                    <h4 className="mb-3">3.12 $</h4>
+                                    <h4 className="mb-3">300 GNF</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-light">
+                        <div className="p-4 rounded bg-vert">
                             <div className="row align-items-center">
                                 <div className="col-6">
                                     <img src={require ('./img/best-product-3.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
@@ -676,14 +704,14 @@ export default function Home() {
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
                                     
-                                    <h4 className="mb-3">3.12 $</h4>
+                                    <h4 className="mb-3">300 GNF</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-light">
+                        <div className="p-4 rounded bg-vert">
                             <div className="row align-items-center">
                                 <div className="col-6">
                                     <img src={require ('./img/best-product-4.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
@@ -691,14 +719,14 @@ export default function Home() {
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
                                    
-                                    <h4 className="mb-3">3.12 $</h4>
+                                    <h4 className="mb-3">300 GNF</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-light">
+                        <div className="p-4 rounded bg-vert">
                             <div className="row align-items-center">
                                 <div className="col-6">
                                     <img src={require ('./img/best-product-5.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
@@ -706,14 +734,14 @@ export default function Home() {
                                 <div className="col-6">
                                     <a href="#" className="h5">Organic Tomato</a>
                                     
-                                    <h4 className="mb-3">3.12 $</h4>
+                                    <h4 className="mb-3">300 GNF</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-light">
+                        <div className="p-4 rounded bg-vert">
                             <div className="row align-items-center">
                                 <div className="col-6">
                                     <img src={require ('./img/best-product-1.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
@@ -722,7 +750,7 @@ export default function Home() {
                                     <a href="#" className="h5">Organic Tomato</a>
                                    
                                    
-                                    <h4 className="mb-3">3.12 $</h4>
+                                    <h4 className="mb-3">300 GNF</h4>
                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                 </div>
                             </div>
@@ -740,7 +768,7 @@ export default function Home() {
         {/* <!-- Fact Start --> */}
         {/* <div className="container-fluid py-5">
             <div className="container">
-                <div className="bg-light p-5 rounded">
+                <div className="bg-vert p-5 rounded">
                     <div className="row g-4 justify-content-center">
                         <div className="col-md-6 col-lg-6 col-xl-3">
                             <div className="counter bg-white rounded p-5">
@@ -785,7 +813,7 @@ export default function Home() {
                     <h1 className="display-5 mb-5 text-dark">Our Client Saying!</h1>
                 </div>
                 <div className="owl-carousel testimonial-carousel">
-                    <div className="testimonial-item img-border-radius bg-light rounded p-4">
+                    <div className="testimonial-item img-border-radius bg-vert rounded p-4">
                         <div className="position-relative">
                             <i className="fa fa-quote-right fa-2x text-secondary position-absolute" style= {{bottom: 30, right: 0}}></i>
                             <div className="mb-4 pb-4 border-bottom border-secondary">
@@ -810,7 +838,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="testimonial-item img-border-radius bg-light rounded p-4">
+                    <div className="testimonial-item img-border-radius bg-vert rounded p-4">
                         <div className="position-relative">
                             <i className="fa fa-quote-right fa-2x text-secondary position-absolute" style= {{bottom: 30, right: 0}}></i>
                             <div className="mb-4 pb-4 border-bottom border-secondary">
@@ -835,7 +863,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="testimonial-item img-border-radius bg-light rounded p-4">
+                    <div className="testimonial-item img-border-radius bg-vert rounded p-4">
                         <div className="position-relative">
                             <i className="fa fa-quote-right fa-2x text-secondary position-absolute" style= {{bottom: 30, right: 0}}></i>
                             <div className="mb-4 pb-4 border-bottom border-secondary">

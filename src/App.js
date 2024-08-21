@@ -11,7 +11,7 @@ import Shop from './components/Shop/Shop';
 import Shop_details from './components/Shop/Shop_details/Shop_details';
 import Marche from './components/Marche/Marche';
 import Market_detail from './components/Market_details/Market_detail';
-
+import Magasin_details from './components/Magasin/Magasin_details';
 function App() {
   return (
     <Router>
@@ -59,10 +59,17 @@ function App() {
             <Footer />
           </>
         } />
-         <Route path="/marche-details" element={
+         <Route path="/marche-details/:id_marche" element={
           <>
             <Navbar />
             <Market_detail />
+            <Footer />
+          </>
+        } />
+         <Route path="/magasin-details/:id_magasin" element={
+          <>
+            <Navbar />
+            <Magasin_details />
             <Footer />
           </>
         } />

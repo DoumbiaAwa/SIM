@@ -8,15 +8,12 @@ export default function Shop() {
     
 
   return (
-    <div>
-        <br />
-        <br />
-        <br />
-        <br />
+    <div style={{marginTop:150}}>
+        
         {/* <!-- Fruits Shop Start--> */}
         <div className="container-fluid fruite py-5">
             <div className="container py-5">
-                <h1 className="mb-4">Fresh fruits shop</h1>
+                {/* <h1 className="mb-4">Fresh fruits shop</h1> */}
                 <div className="row g-4">
                     <div className="col-lg-12">
                         <div className="row g-4">
@@ -44,7 +41,9 @@ export default function Shop() {
                                 <div className="row g-4">
                                     <div className="col-lg-12">
                                         <div className="mb-3">
+                                            <br />
                                             <h4>Categories</h4>
+                                            
                                             <ul className="list-unstyled fruite-categorie">
                                                 <li>
                                                     <div className="d-flex justify-content-between fruite-name">
@@ -98,7 +97,7 @@ export default function Shop() {
                                                 <h4>Grapes</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -115,7 +114,7 @@ export default function Shop() {
                                                 <h4>Grapes</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -131,7 +130,7 @@ export default function Shop() {
                                                 <h4>Raspberries</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -147,7 +146,7 @@ export default function Shop() {
                                                 <h4>Apricots</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -163,7 +162,7 @@ export default function Shop() {
                                                 <h4>Banana</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -179,7 +178,7 @@ export default function Shop() {
                                                 <h4>Oranges</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -195,7 +194,7 @@ export default function Shop() {
                                                 <h4>Raspberries</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -211,7 +210,7 @@ export default function Shop() {
                                                 <h4>Grapes</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
@@ -227,7 +226,7 @@ export default function Shop() {
                                                 <h4>Oranges</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div className="d-flex justify-content-between flex-lg-wrap">
-                                                    <p className="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p className="text-dark fs-5 fw-bold mb-0">2000 GNF / kg</p>
                                                     {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
                                                 </div>
                                             </div>
