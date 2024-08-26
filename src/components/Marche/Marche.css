@@ -19,3 +19,17 @@
     animation: pulse 1.5s infinite;
   }
   
+  @media (max-width: 480px) {
+ .search {
+  width: 300px !important;
+  justify-content: center;
+  margin-left: 50px;
+  
+ }
+ .d-flex{
+  width: 100%;
+ }
+ .col-md-6{
+  margin-bottom: 20px;
+ }
+  }

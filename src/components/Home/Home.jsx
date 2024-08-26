@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <div style={{marginBottom: '200px'}}>
        {/* /* <!-- Modal Search Start --> */} */
-        <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div style={{marginTop: '-80px'}}>
+        <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{marginBottom: 50}}>
             <div className="modal-dialog modal-fullscreen">
                 <div className="modal-content rounded-0">
                     <div className="modal-header">
@@ -27,7 +28,7 @@ export default function Home() {
             <div className="container py-5">
                 <div className="row g-5 align-items-center">
                     <div className="col-md-12 col-lg-7">
-                        <h4 className="mb-3 text">100% Agro-pastoral</h4>
+                        <h4 className="mb-3 text" style={{color: 'red'}}>100% Agro-pastoral</h4>
                         <h1 className="mb-5 display-3 text-primary" style={{ fontSize: '2.5rem',textAlign: 'left' }}>Soyez les premiers à connaître les dernières nouvelles.</h1>
                         <div className="position-relative mx-auto">
                             <input className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search"/>
@@ -92,10 +93,10 @@ export default function Home() {
             </div>
         </div>
         {/* <!-- Hero End --> */}
-
+        </div>
 
         {/* <!-- Featurs Section Start --> */}
-     <div className="container-fluid featurs py-5">
+     <div className="categorie py-5">
 
       <div className="container py-5">
 <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{marginTop: 10}}>
@@ -107,41 +108,41 @@ export default function Home() {
       <div className="row g-4">
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
-              <h5>Catégorie SIM 1</h5>
+              <h5>SIM Agricole</h5>
             </div>
           </div>
         </div>
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
-              <h5>Catégorie SIM 2</h5>
+              <h5>SIM Bétail</h5>
             </div>
           </div>
         </div>
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
-              <h5>Catégorie SIM 3</h5>
+              <h5>SIM Pêche</h5>
             </div>
           </div>
         </div>
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
-              <h5>Catégorie SIM 4</h5>
+              <h5>Magasin d'intrants</h5>
             </div>
           </div>
         </div>
@@ -153,9 +154,9 @@ export default function Home() {
       <div className="row g-4">
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
               <h5>Catégorie SIM 5</h5>
             </div>
@@ -163,9 +164,9 @@ export default function Home() {
         </div>
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
               <h5>Catégorie SIM 6</h5>
             </div>
@@ -173,9 +174,9 @@ export default function Home() {
         </div>
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
               <h5>Catégorie SIM 7</h5>
             </div>
@@ -183,9 +184,9 @@ export default function Home() {
         </div>
         <div className="col-md-3">
           <div className="featurs-item text-center rounded bg-vert p-4">
-            <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
               <i className="fas fa-seedling fa-3x text-white"></i>
-            </div>
+            </div> */}
             <div className="featurs-content text-center">
               <h5>Catégorie SIM 8</h5>
             </div>
@@ -197,11 +198,11 @@ export default function Home() {
   </div>
   
   {/* <!-- Contrôles du slider --> */}
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style={{marginTop: '30px', marginLeft: '1px'}}>
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Précédent</span>
   </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style={{marginTop: '30px',marginRight: '1px'}}>
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Suivant</span>
   </button>
@@ -218,10 +219,10 @@ export default function Home() {
                 <div className ="tab-class text-center">
                     <div className ="row g-4">
                         <div className ="col-lg-4 text-start">
-                            <button type="button" className="btn btn-success">Produits récentes</button>
+                            <button type="button" className="btn btn-success">Produits récents</button>
                         </div>
                         <div className ="col-lg-8 text-end">
-                            <ul className ="nav nav-pills d-inline-flex text-center mb-5">
+                            <ul className ="nav nav-pills d-inline-flex text-center mb-0">
                                 <li className ="nav-item">
                                     <a className ="d-flex m-2 py-2 bg-vert rounded-pill active" data-bs-toggle="pill" href="#tab-1">
                                         <span className ="text-dark" style= {{width: 130}}> All Products</span>
@@ -763,136 +764,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
-        {/* <!-- Bestsaler Product End --> */}
-
-        {/* <!-- Fact Start --> */}
-        {/* <div className="container-fluid py-5">
-            <div className="container">
-                <div className="bg-vert p-5 rounded">
-                    <div className="row g-4 justify-content-center">
-                        <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="counter bg-white rounded p-5">
-                                <i className="fa fa-users text-secondary"></i>
-                                <h4>satisfied customers</h4>
-                                <h1>1963</h1>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="counter bg-white rounded p-5">
-                                <i className="fa fa-users text-secondary"></i>
-                                <h4>quality of service</h4>
-                                <h1>99%</h1>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="counter bg-white rounded p-5">
-                                <i className="fa fa-users text-secondary"></i>
-                                <h4>quality certificates</h4>
-                                <h1>33</h1>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="counter bg-white rounded p-5">
-                                <i className="fa fa-users text-secondary"></i>
-                                <h4>Available Products</h4>
-                                <h1>789</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> */}
-        {/* <!-- Fact Start --> */}
-
-
-        {/* <!-- Tastimonial Start --> */}
-        {/* <div className="container-fluid testimonial py-5">
-            <div className="container py-5">
-                <div className="testimonial-header text-center">
-                    <h4 className="text-primary">Our Testimonial</h4>
-                    <h1 className="display-5 mb-5 text-dark">Our Client Saying!</h1>
-                </div>
-                <div className="owl-carousel testimonial-carousel">
-                    <div className="testimonial-item img-border-radius bg-vert rounded p-4">
-                        <div className="position-relative">
-                            <i className="fa fa-quote-right fa-2x text-secondary position-absolute" style= {{bottom: 30, right: 0}}></i>
-                            <div className="mb-4 pb-4 border-bottom border-secondary">
-                                <p className="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div className="d-flex align-items-center flex-nowrap">
-                                <div className="bg-secondary rounded">
-                                    <img src={require ('./img/testimonial-1.jpg')}className="img-fluid rounded" style= {{width: 100, height: 100,}} alt=""/>
-                                </div>
-                                <div className="ms-4 d-block">
-                                    <h4 className="text-dark">Client Name</h4>
-                                    <p className="m-0 pb-3">Profession</p>
-                                    <div className="d-flex pe-5">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="testimonial-item img-border-radius bg-vert rounded p-4">
-                        <div className="position-relative">
-                            <i className="fa fa-quote-right fa-2x text-secondary position-absolute" style= {{bottom: 30, right: 0}}></i>
-                            <div className="mb-4 pb-4 border-bottom border-secondary">
-                                <p className="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div className="d-flex align-items-center flex-nowrap">
-                                <div className="bg-secondary rounded">
-                                    <img src={require ('./img/testimonial-1.jpg')} className="img-fluid rounded" style= {{width: 100, height: 100}} alt=""/>
-                                </div>
-                                <div className="ms-4 d-block">
-                                    <h4 className="text-dark">Client Name</h4>
-                                    <p className="m-0 pb-3">Profession</p>
-                                    <div className="d-flex pe-5">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="testimonial-item img-border-radius bg-vert rounded p-4">
-                        <div className="position-relative">
-                            <i className="fa fa-quote-right fa-2x text-secondary position-absolute" style= {{bottom: 30, right: 0}}></i>
-                            <div className="mb-4 pb-4 border-bottom border-secondary">
-                                <p className="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div className="d-flex align-items-center flex-nowrap">
-                                <div className="bg-secondary rounded">
-                                    <img src={require ('./img/testimonial-1.jpg')} className="img-fluid rounded" style= {{width: 100, height: 100}} alt=""/>
-                                </div>
-                                <div className="ms-4 d-block">
-                                    <h4 className="text-dark">Client Name</h4>
-                                    <p className="m-0 pb-3">Profession</p>
-                                    <div className="d-flex pe-5">
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                        <i className="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> */}
-        {/* <!-- Tastimonial End --> */}
-
+       
       
 
 

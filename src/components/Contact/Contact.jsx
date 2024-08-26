@@ -11,13 +11,12 @@ export default function Contact() {
                         <div className="col-12">
                            
                         </div>
-                        <div className="col-lg-12">
-                            <div className="h-100 rounded">
-                                <iframe className="rounded w-100" 
-                                style= {{height: 400}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
+                        <iframe className="rounded w-100" 
+  style= {{height: 400}} 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1591037.7366769485!2d-14.8981006!3d10.8199236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1675c59517c9f%3A0x118c9b7b6e7bb788!2sGuinea!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
+  loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
                         <div className="col-lg-7">
                             <form action="" className="">
                                 <input type="text" className="w-100 form-control border-0 py-3 mb-4" placeholder="Your Name"/>

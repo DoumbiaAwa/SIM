@@ -9,7 +9,7 @@ export default function About() {
           <img src={require('./img/ab.jpg')} alt="" style={{width: 500, height: 500}} />
         </div>
         <div className="col-sm-6" >
-          <p className='text'>
+          <p className='text-about'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis fugiat facilis voluptatum error itaque tempore vitae, saepe dolorem numquam dolorum alias temporibus modi nam nihil atque eos recusandae corporis eligendi?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non nam repellat quaerat optio, unde tempora. Earum, rem enim dolore eos vitae, aut, atque quasi consequatur adipisci vel non sequi!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum, dolorem vero molestias et iure magni id expedita quibusdam ex assumenda! Vero, aperiam? Eveniet tempore iusto voluptates, nesciunt laboriosam temporibus!

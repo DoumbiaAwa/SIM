@@ -1,56 +1,69 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import './Marche.css'
 export default function Marche() {
   const [marches, setMarches] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [magasins, setMagasins] = useState([]);
-  const [filter, setFilter] = useState('marche'); // Initialisation du filtre avec 'marche'
+  const [filter, setFilter] = useState('marche');
+  const [accessToken, setAccessToken] = useState('');
 
-  // Gestion du changement de la barre de recherche
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
+  // Fonction pour récupérer un nouveau token
+  const fetchAccessToken = async () => {
+    try {
+      const response = await fetch('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          
+            "username": "Awa",
+            "password": "12345"
+          
+        })
+     
+     
+      });
+      const data = await response.json();
+      setAccessToken(data.access_token);
+    } catch (error) {
+      console.error('Erreur lors de la récupération du token:', error);
+    }
   };
 
-  // Gestion du changement du filtre
-  const handleFilterChange = (event) => {
-    setFilter(event.target.value);
+  useEffect(() => {
+    fetchAccessToken();
+  }, []);
+
+  // Requête API avec le token
+  const fetchData = async (url) => {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          "Authorization": `Bearer ${accessToken}`
+        }
+      });
+      return await response.json();
+    } catch (error) {
+      console.error('Erreur lors de la récupération des données:', error);
+    }
   };
 
   // Récupération des marchés
   useEffect(() => {
-    fetch('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/marches',  {
-      headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiaW50b3UiLCJleHAiOjE3MjQzNDI5Njh9.DDM2W4hMBsRvnUrakWhy3Df9CsCMSzEoPzBNmyTO0jA"
-      }
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => setMarches(data))
-      .catch(err => console.error('Erreur lors de la récupération du marché:', err));
-  }, []);
+    if (accessToken) {
+      fetchData('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/marches').then(data => setMarches(data));
+    }
+  }, [accessToken]);
 
   // Récupération des magasins
   useEffect(() => {
-    fetch('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/magasins', {
-      headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiaW50b3UiLCJleHAiOjE3MjQzNDI5Njh9.DDM2W4hMBsRvnUrakWhy3Df9CsCMSzEoPzBNmyTO0jA"
-      }
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => setMagasins(data))
-      .catch(err => console.error('Erreur lors de la récupération des magasins:', err));
-  }, []);
+    if (accessToken) {
+      fetchData('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/magasins').then(data => setMagasins(data));
+    }
+  }, [accessToken]);
 
   // Filtrage des marchés ou des magasins en fonction du terme de recherche
   const filteredItems = filter === 'marche'
@@ -62,8 +75,8 @@ export default function Marche() {
       );
 
   return (
-    <div style={{ marginTop: 150, marginBottom: 200 }}>
-      <div className="row justify-content-center">
+    <div style={{ marginTop: 100, marginBottom: 200 }}>
+      <div className="search row justify-content-center">
         <div className="col-md-6">
           <div className="input-group">
             <input
@@ -72,19 +85,19 @@ export default function Marche() {
               placeholder="Search for items..."
               aria-label="Search"
               value={searchTerm}
-              onChange={handleSearchChange}
+              onChange={e => setSearchTerm(e.target.value)}
             />
             <button className="btn btn-primary" type="button">Rechercher</button>
           </div>
         </div>
-        {/* Filtre dynamique */}
+        
         <div className="col-md-2">
           <div className="input-group">
             <select
               className="form-select"
               aria-label="Filter by"
               value={filter}
-              onChange={handleFilterChange} // Mise à jour du filtre lors du changement
+              onChange={e => setFilter(e.target.value)}
             >
               <option value="marche">Marché</option>
               <option value="magasin">Boutique</option>
@@ -94,7 +107,6 @@ export default function Marche() {
       </div>
 
       <br />
-      {/* Affichage dynamique des éléments filtrés */}
       <div className="d-flex flex-wrap justify-content-center gap-4" style={{ maxWidth: '100%', margin: '0 auto' }}>
         {filteredItems.map((item) => (
           <Link
