@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Marche.css'
+
 export default function Marche() {
   const [marches, setMarches] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,13 +19,9 @@ export default function Marche() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          
             "username": "Awa",
             "password": "12345"
-          
         })
-     
-     
       });
       const data = await response.json();
       setAccessToken(data.access_token);
@@ -75,58 +72,102 @@ export default function Marche() {
       );
 
   return (
-    <div style={{ marginTop: 100, marginBottom: 200 }}>
-      <div className="search row justify-content-center">
-        <div className="col-md-6">
-          <div className="input-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search for items..."
-              aria-label="Search"
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-            />
-            <button className="btn btn-primary" type="button">Rechercher</button>
-          </div>
-        </div>
-        
-        <div className="col-md-2">
-          <div className="input-group">
-            <select
-              className="form-select"
-              aria-label="Filter by"
-              value={filter}
-              onChange={e => setFilter(e.target.value)}
-            >
-              <option value="marche">Marché</option>
-              <option value="magasin">Boutique</option>
-            </select>
-          </div>
-        </div>
+    
+    <div  style={{ marginTop: 150, marginBottom: 300 , justifyContent: 'center'}}>
+      <div style={{textAlign: 'center', marginBottom:'20px',background: 'linear-gradient(rgba(54, 159, 74, 0.7), rgba(255, 255, 255, 0.7))', height: '50px'}}>
+      <h3 className='mar'>Trouvez rapidement ce que vous cherchez en filtrant par magasin ou marché <i className='fas fa-search'></i></h3>
       </div>
 
-      <br />
-      <div className="d-flex flex-wrap justify-content-center gap-4" style={{ maxWidth: '100%', margin: '0 auto' }}>
-        {filteredItems.map((item) => (
-          <Link
-            to={filter === 'marche' ? `/marche-details/${item.id_marche}` : `/magasin-details/${item.id_magasin}`}
-            state={filter === 'marche' ? { marche: item } : { magasin: item }}
-            key={filter === 'marche' ? item.id_marche : item.id_magasin}
-            style={{ textDecoration: 'none', color: 'inherit' }}>
-            <motion.div
-              className="card"
-              style={{ width: '18rem', border: '1px solid green' }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <div className="card-body">
-                <h5 className="card-title">{filter === 'marche' ? item.nom_marche : item.nom_magasin}</h5>
-                <p className="card-text">{item.description}</p>
-              </div>
-            </motion.div>
-          </Link>
-        ))}
+      <div className="row">
+        <div className="col-md-3">
+        
+            <img src={require('./img/market.jpg')} style={{height: '300px', width:'300px'}} />
+           <br />
+           <div className="mb-3 g-2">
+                                            <br />
+                                            <h4>Categories</h4>
+                                            
+                                            <ul className="list-unstyled fruite-categorie">
+                                                <li>
+                                                    <div className="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i className="fas fa-apple-alt me-2"></i>Agricole</a>
+                                                        <span>(3)</span>
+                                                    </div>
+                                                </li>
+                                                <br />
+                                                <li>
+                                                    <div className="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i className="fas fa-apple-alt me-2"></i>Bétail</a>
+                                                        <span>(5)</span>
+                                                    </div>
+                                                </li>
+                                                <br />
+                                                <li>
+                                                    <div className="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i className="fas fa-apple-alt me-2"></i> Pêche</a>
+                                                        <span>(2)</span>
+                                                    </div>
+                                                </li>
+                                                <br />
+                                                <li>
+                                                    <div className="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i className="fas fa-apple-alt me-2"></i>Intrant</a>
+                                                        <span>(8)</span>
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+        </div>
+          
+        <div className="col-md-8">
+        <div className="input-group" style={{width:'500px'}}>
+              <input
+                
+                type="text"
+                className="form-control"
+                placeholder="Search for items..."
+                aria-label="Search"
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+              />
+              {/* <button className="btn btn-primary" type="button"> */}
+              <select
+                className="form-select"
+                aria-label="Filter by"
+                value={filter}
+                onChange={e => setFilter(e.target.value)}
+              >
+                <option value="marche">Marché</option>
+                <option value="magasin">Boutique</option>
+              </select>
+              {/* </button> */}
+            </div>
+            <br />
+          <div className="d-flex flex-wrap justify-content-start gap-5">
+            {filteredItems.map((item) => (
+              <Link
+                to={filter === 'marche' ? `/marche-details/${item.id_marche}` : `/magasin-details/${item.id_magasin}`}
+                state={filter === 'marche' ? { marche: item } : { magasin: item }}
+                key={filter === 'marche' ? item.id_marche : item.id_magasin}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <motion.div
+                  className="card"
+                  style={{ width: '14rem', border: '1px solid green' }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <div className="card-body">
+                    <img src={require ('./img/market-icon.jpeg')} alt="" srcset="" />
+                    <h5 className="card-title">{filter === 'marche' ? item.nom_marche : item.nom_magasin}</h5>
+                    <p className="card-text">{item.description}</p>
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

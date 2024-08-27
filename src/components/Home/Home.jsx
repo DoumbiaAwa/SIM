@@ -1,11 +1,17 @@
 import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
 export default function Home() {
   return (
     <div style={{marginBottom: '200px'}}>
        {/* /* <!-- Modal Search Start --> */} */
-       <div style={{marginTop: '-80px'}}>
+       <div style={{marginTop: '-90px'}}>
         <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{marginBottom: 50}}>
             <div className="modal-dialog modal-fullscreen">
                 <div className="modal-content rounded-0">
@@ -24,7 +30,7 @@ export default function Home() {
         </div>
         {/* <!-- Modal Search End --> */}
 {/* <!-- Hero Start --> */}
-        <div className="container-fluid py-5 mb-5 hero-header" style={{ maxWidth: '100%' }}>
+        <div className="container-fluid py-5 mb-5 hero-header" style={{ maxWidth: '100%'}}>
             <div className="container py-5">
                 <div className="row g-5 align-items-center">
                     <div className="col-md-12 col-lg-7">
@@ -35,7 +41,7 @@ export default function Home() {
                             <button type="submit" className="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style={{ top: '0', right: '25%' }}>Rechercher</button>
                         </div>
                     </div>
-                            <div className="col-md-12 col-lg-5">
+                    <div className="col-md-12 col-lg-5" style={{marginTop: '30px'}}>
                         <div id="carouselId" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
                                 <div className="carousel-item active rounded">
@@ -103,114 +109,38 @@ export default function Home() {
 <button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
 <br />
 <br />
-  <div className="carousel-inner">
-    <div className="carousel-item active">
+<div className="carousel-inner">
       <div className="row g-4">
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>SIM Agricole</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>SIM Bétail</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>SIM Pêche</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>Magasin d'intrants</h5>
-            </div>
-          </div>
-        </div>
+        {["SIM Agricole", "SIM Bétail", "SIM Pêche", "Magasin d'intrants"].map((title, index) => (
+          <motion.div
+            key={index}
+            className="col-md-3"
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            whileHover={{ scale: 1.1 }}
+          >
+            <Link to="/categorie" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="featurs-item text-center rounded bg-vert p-4">
+                <div className="featurs-content text-center">
+                  <h5>{title}</h5>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        ))}
       </div>
     </div>
+   
     
-    {/* <!-- Répétez les blocs pour chaque groupe de 4 cartes --> */}
-    <div className="carousel-item">
-      <div className="row g-4">
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>Catégorie SIM 5</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>Catégorie SIM 6</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>Catégorie SIM 7</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="featurs-item text-center rounded bg-vert p-4">
-            {/* <div className="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-              <i className="fas fa-seedling fa-3x text-white"></i>
-            </div> */}
-            <div className="featurs-content text-center">
-              <h5>Catégorie SIM 8</h5>
-            </div>
-          </div>
-        </div>
-        {/* <!-- Autres cartes... --> */}
-      </div>
-    </div>
+    
   </div>
   
-  {/* <!-- Contrôles du slider --> */}
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style={{marginTop: '30px', marginLeft: '1px'}}>
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Précédent</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style={{marginTop: '30px',marginRight: '1px'}}>
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Suivant</span>
-  </button>
 </div>
 
         
       </div>
-    </div>
     {/* <!-- Featurs Section End --> */}
 
     {/* <!-- Fruits Shop Start--> */}

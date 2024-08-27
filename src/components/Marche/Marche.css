@@ -33,3 +33,27 @@
   margin-bottom: 20px;
  }
   }
+
+.mar{
+  font-size: 25px;
+  /* color: #FBD608; */
+}
+.form-select{
+  background-color: #FBD608;
+}
+.containe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.marche-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.row{
+  justify-content: center;
+}

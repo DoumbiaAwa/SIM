@@ -13,6 +13,17 @@ export default function Navbar() {
     return (
         <header>
             <div className="container-fluid fixed-top">
+            <div className="container topbar bg-primary d-none d-lg-block" style={{height:40,}}>
+
+<div className="d-flex justify-content-between">
+    <div >                
+        <h1 className="sim">Système d'Information sur les marchés en Guinée</h1>
+    </div>
+
+</div>
+</div>
+
+
                 <div className="container px-0">
                     <nav className="navbar navbar-light bg-white navbar-expand-xl">
                         <img src={require('./logo.png')} className="logo" alt="logo"/>

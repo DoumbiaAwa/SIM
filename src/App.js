@@ -12,6 +12,7 @@ import Shop_details from './components/Shop/Shop_details/Shop_details';
 import Marche from './components/Marche/Marche';
 import Market_detail from './components/Market_details/Market_detail';
 import Magasin_details from './components/Magasin/Magasin_details';
+import Categorie from './components/Categorie/Categorie';
 function App() {
   return (
     <Router>
@@ -70,6 +71,13 @@ function App() {
           <>
             <Navbar />
             <Magasin_details />
+            <Footer />
+          </>
+        } />
+          <Route path="/categorie" element={
+          <>
+            <Navbar />
+            <Categorie />
             <Footer />
           </>
         } />
