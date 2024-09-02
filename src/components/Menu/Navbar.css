@@ -1,3 +1,23 @@
+.drapeau {
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    height: 15px;
+}
+.rouge {
+    background-color: red;
+    width: 33.33%; /* Changer à 33.33% */
+}
+
+.jaune {
+    background-color: yellow;
+    width: 33.33%; /* Changer à 33.33% */
+}
+
+.vert {
+    background-color: green;
+    width: 33.33%; /* Changer à 33.33% */
+}
 
 @media (max-width: 480px) {
     .floating-button{
@@ -28,16 +48,12 @@
 
 .sim{
     margin-left: 350px;
-    color: white;
+    color: #ffca08 !important;
     font-weight: bold;
     font-size: 18px;
     margin-top: -10px;
 }
 
-.drapeau {
-    width: 100%;
-    display: flex;
-}
 
 
 

@@ -36,7 +36,14 @@
 
 .mar{
   font-size: 25px;
-  /* color: #FBD608; */
+ 
+}
+.titre{
+  text-align: center;
+ margin-bottom:20px;
+ background: linear-gradient(rgba(54, 159, 74, 0.7), rgba(255, 255, 255, 0.7));
+  height: 80px;
+  margin-bottom: 50px;
 }
 .form-select{
   background-color: #FBD608;

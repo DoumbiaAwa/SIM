@@ -1,18 +1,14 @@
 import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
+
 export default function Home() {
   return (
     <div style={{marginBottom: '200px'}}>
        {/* /* <!-- Modal Search Start --> */} */
-       <div style={{marginTop: '-90px'}}>
-        <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{marginBottom: 50}}>
+        <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-fullscreen">
                 <div className="modal-content rounded-0">
                     <div className="modal-header">
@@ -30,18 +26,18 @@ export default function Home() {
         </div>
         {/* <!-- Modal Search End --> */}
 {/* <!-- Hero Start --> */}
-        <div className="container-fluid py-5 mb-5 hero-header" style={{ maxWidth: '100%'}}>
+        <div className="container-fluid py-5 mb-5 hero-header" style={{ maxWidth: '100%' }}>
             <div className="container py-5">
                 <div className="row g-5 align-items-center">
                     <div className="col-md-12 col-lg-7">
-                        <h4 className="mb-3 text" style={{color: 'red'}}>100% Agro-pastoral</h4>
-                        <h1 className="mb-5 display-3 text-primary" style={{ fontSize: '2.5rem',textAlign: 'left' }}>Soyez les premiers à connaître les dernières nouvelles.</h1>
+                        <h4 className="mb-3 text">100% Agro-pastoral</h4>
+                        <h1 className="mb-5 display-3 text-primary" style={{ fontSize: '2.5rem',textAlign: 'left' }}>Système d'Information sur les Marchés en Guinée</h1>
                         <div className="position-relative mx-auto">
                             <input className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search"/>
                             <button type="submit" className="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style={{ top: '0', right: '25%' }}>Rechercher</button>
                         </div>
                     </div>
-                    <div className="col-md-12 col-lg-5" style={{marginTop: '30px'}}>
+                            <div className="col-md-12 col-lg-5">
                         <div id="carouselId" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
                                 <div className="carousel-item active rounded">
@@ -99,48 +95,71 @@ export default function Home() {
             </div>
         </div>
         {/* <!-- Hero End --> */}
-        </div>
+{/* <br /> */}
 
         {/* <!-- Featurs Section Start --> */}
-     <div className="categorie py-5">
+     <div className="container-fluid featurs py-5" >
 
       <div className="container py-5">
-<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{marginTop: 10}}>
+<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{height: '300px'}}>
 <button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
 <br />
-<br />
-<div className="carousel-inner">
-      <div className="row g-4">
-        {["SIM Agricole", "SIM Bétail", "SIM Pêche", "Magasin d'intrants"].map((title, index) => (
-          <motion.div
-            key={index}
-            className="col-md-3"
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            whileHover={{ scale: 1.1 }}
-          >
-            <Link to="/categorie" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="featurs-item text-center rounded bg-vert p-4">
-                <div className="featurs-content text-center">
-                  <h5>{title}</h5>
+<div className="carousel-inner" style={{marginTop: '80px'}}>
+    <div className="carousel-item active">
+        <div className="row g-4">
+            {/* <!-- Intrant (Agricole) --> */}
+            <div className="col-md-3">
+                <div className="featurs-item text-center rounded p-1" >
+                    <i className="fas fa-seedling fa-6x text-red"style={{ marginBottom: '20px' }}></i>
+                    <div className="featurs-content text-center">
+                        <h5>SIM Agricole</h5>
+                    </div>
                 </div>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
+            </div>
+
+            {/* <!-- Bétail --> */}
+            <div className="col-md-3">
+                <div className="featurs-item text-center rounded p-1">
+                    <i className="fas fa-hippo fa-6x text-red" style={{ marginBottom: '20px' }}></i>
+                    <div className="featurs-content text-center">
+                        <h5>SIM Bétail</h5>
+                    </div>
+                </div>
+            </div>
+
+            {/* <!-- Pêche --> */}
+            <div className="col-md-3">
+                <div className="featurs-item text-center rounded p-1">
+                    <i className="fas fa-fish fa-6x text-red" style={{ marginBottom: '20px' }}></i>
+                    <div className="featurs-content text-center">
+                        <h5>SIM Pêche</h5>
+                    </div>
+                </div>
+            </div>
+
+            {/* <!-- Intrant (Agricole) --> */}
+            <div className="col-md-3">
+                <div className="featurs-item text-center rounded p-1">
+                    <i className="fas fa-tractor fa-6x text-red" style={{ marginBottom: '20px' }}></i>
+                    <div className="featurs-content text-center">
+                        <h5>SIM Intrant</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   
-    
-    
-  </div>
+
+    {/* <!-- Répétez les blocs pour chaque groupe de 4 cartes --> */}
+</div>
+
   
+  {/* <!-- Contrôles du slider --> */}
+ 
 </div>
 
         
       </div>
+    </div>
     {/* <!-- Featurs Section End --> */}
 
     {/* <!-- Fruits Shop Start--> */}
@@ -149,10 +168,10 @@ export default function Home() {
                 <div className ="tab-class text-center">
                     <div className ="row g-4">
                         <div className ="col-lg-4 text-start">
-                            <button type="button" className="btn btn-success">Produits récents</button>
+                            <button type="button" className="btn btn-success">Produits récentes</button>
                         </div>
                         <div className ="col-lg-8 text-end">
-                            <ul className ="nav nav-pills d-inline-flex text-center mb-0">
+                            <ul className ="nav nav-pills d-inline-flex text-center mb-5">
                                 <li className ="nav-item">
                                     <a className ="d-flex m-2 py-2 bg-vert rounded-pill active" data-bs-toggle="pill" href="#tab-1">
                                         <span className ="text-dark" style= {{width: 130}}> All Products</span>
@@ -181,6 +200,8 @@ export default function Home() {
                             </ul>
                         </div>
                     </div>
+                    <br />
+                    
                     <div className="tab-content">
                         <div id="tab-1" className="tab-pane fade show p-0 active">
                             <div className="row g-4">
@@ -498,100 +519,58 @@ export default function Home() {
                 </div>      
             </div>
         </div>
-    {/* <!-- Fruits Shop End--> */}
-
-    {/* <!-- Featurs Start --> */}
-
-    <div className="container-fluid service py-5">
-            <div className="container py-5">
-                <div className="row g-4 justify-content-center">
-                    
-                    
-                    <div className="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div className="service-item bg-primary rounded border border-primary">
-                                <img src={require ('./img/featur-3.jpg')} className="img-fluid rounded-top w-100" alt=""/>
-                                <div className="px-4 rounded-bottom">
-                                    <div className="service-content bg-secondary text-center p-4 rounded">
-                                        <h5 className="text-white">Légumes</h5>
-                                        <h3 className="mb-0">500 GNF</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div className="service-item bg-primary rounded border border-primary">
-                                <img src={require ('./img/featur-3.jpg')} className="img-fluid rounded-top w-100" alt=""/>
-                                <div className="px-4 rounded-bottom">
-                                    <div className="service-content bg-secondary text-center p-4 rounded">
-                                        <h5 className="text-white">Légumes</h5>
-                                        <h3 className="mb-0">500 GNF</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div className="service-item bg-primary rounded border border-primary">
-                                <img src={require ('./img/featur-3.jpg')} className="img-fluid rounded-top w-100" alt=""/>
-                                <div className="px-4 rounded-bottom">
-                                    <div className="service-content bg-secondary text-center p-4 rounded">
-                                        <h5 className="text-white">Légumes</h5>
-                                        <h3 className="mb-0">500 GNF</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        {/* <!-- Featurs End --> */}
+   
 
 
         {/* <!-- Banner Section Start--> */}
-        <div className="container-fluid banner bg-secondary my-5 ">
-            {/* <div className="container "> */}
-                <div className="row g-4 align-items-center">
-                    <div className="col-lg-9">
-                        <div className="py-6">
-                            <h1 className="display-3 text-white" style={{fontSize:50}}>Se perdre dans les allées du marché</h1>
-                            <p className="fw-normal display-3 text-dark mb-4" style={{fontSize:50}}>Pour découvrir les trésors cachés de chaque boutique.</p>
-                            {/* <p className="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p> */}
-                            <Link to="/marche" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <a href="#" className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">Explorer</a>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="col-lg-3">
-                        <div className="position-relative">
-                            <img  src={require ('./img/baner-1.png')} className="img-fluid w-90 rounded" alt=""/>
-                            {/* <div className="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style= {{width: 140, height: 140, top: 0, left: 0}}>
-                                <h1 style= {{fontSize: 100}}>1</h1>
-                                <div className="d-flex flex-column">
-                                    <span className="h2 mb-0">50$</span>
-                                    <span className="h4 text-muted mb-0">kg</span>
-                                </div>
-                            </div> */}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {/* </div> */}
-        {/* <!-- Banner Section End --> */}
+      <div className="container-fluid banner my-5">
+      <div className="row g-4 align-items-center">
+        <div className="col-lg-9">
+          {/* Animation d'entrée du titre */}
+          <motion.h1 
+            className="display-3 text-jaune"
+            style={{ fontSize: 50 }}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Se perdre dans les allées du marché
+          </motion.h1>
 
+          {/* Animation d'entrée du paragraphe */}
+          <motion.p 
+            className="fw-normal display-3 text-dark mb-4"
+            style={{ fontSize: 50 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            Pour découvrir les trésors cachés de chaque boutique.
+          </motion.p>
 
+          {/* Animation d'entrée du bouton */}
+          <Link to="/marche" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <motion.a
+              href="#"
+              className="banner-btn btn border-2 border-white rounded-pill text-dar py-3 px-5"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              Explorer
+            </motion.a>
+          </Link>
+        </div>
+      </div>
+    </div>
+               
 
-       
         {/* <!-- Bestsaler Product Start --> */}
         <div className="container-fluid py-5" style={{marginTop: 60}}>
             <div className="container py-5">
                 <div className="text-center mx-auto mb-5" style= {{maxwidth: 1000}}>
-                    <h1 className="display-6">Découvrez les produits phares du moment</h1>
+                    <h1 className="display-7">Découvrez les produits phares du moment</h1>
                     {/* <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p> */}
                 </div>
                <br />
@@ -694,7 +673,8 @@ export default function Home() {
                 </div>
             </div>
         </div>
-       
+        
+
       
 
 

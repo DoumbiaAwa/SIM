@@ -13,15 +13,19 @@ export default function Navbar() {
     return (
         <header>
             <div className="container-fluid fixed-top">
-            <div className="container topbar bg-primary d-none d-lg-block" style={{height:40,}}>
+     
+     <div className="drapeau">
+        <div className="rouge">
 
-<div className="d-flex justify-content-between">
-    <div >                
-        <h1 className="sim">Système d'Information sur les marchés en Guinée</h1>
-    </div>
+        </div>
+        <div className="jaune">
 
-</div>
-</div>
+        </div>
+        <div className="vert">
+
+        </div>
+
+     </div>
 
 
                 <div className="container px-0">

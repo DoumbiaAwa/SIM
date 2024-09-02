@@ -1,23 +1,79 @@
-.bg-vert{
-    background-color: #bfffb2;
+
+p{
+    color: #000;
+}
+.text-center{
+    color:  rgb(54, 159, 74) !important;
+}
+.bg-jaune{
+    background-color: #ffca08 !important
 }
 
+.text-red{
+    color: #ffca08 !important
+}
+
+.text-dark{
+    color: rgb(54, 159, 74) !important;
+    font-weight: 700;
+}
+.text-dar{
+    background-color: red;
+    color: white;
+}
+.btn-success{
+    background-color: rgb(54, 159, 74) !important
+}
 .text{
     color: red;
 }
 .display-6{
-    color: #369F4A;
+    color: #ffca08 !important;
 }
 
-
+.categorie_name{
+    color: #ffca08 !important;
+    font-weight: 700;
+}
 .bg-color{
     background-color: red;
     font-weight: 700;
 }
 
+.text-jaune{
+    color:  #ffca08 !important;
+}
+.container-fluid.banner {
+    background: linear-gradient(rgba(248, 223, 173, 0.2), rgba(248, 223, 173, 0.2)), 
+                url("./img/Group 18.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px !important; /* Augmenté pour donner plus d'espace */
+    display: flex;
+    align-items: center; /* Centrer le contenu verticalement */
+    padding: 20px; /* Espacement intérieur pour respirer */
+  }
+  
+  .banner-btn {
+    color: #343a40; /* Mieux utiliser des couleurs variables pour plus de flexibilité */
+    font-weight: bold;
+    border-color: #343a40;
+    transition: all 0.3s ease; /* Transition douce pour le hover */
+  }
+  
+  .banner-btn:hover {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+.fw-normal {
+    color: rgb(54, 159, 74) !important;
+    font-weight: bold !important;
+}
 /*** Banner Section Start ***/
 .banner .banner-btn:hover {
-    background: var(--bs-primary);
+    background: #ffca08 !important;
 }
 .custom-slider-height {
     height: 100px; /* Ajustez cette valeur selon vos besoins */
@@ -270,8 +326,8 @@
     background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url("./img/hero-img.jpg"); 
        background-position: center center;
     background-repeat: no-repeat;
-    background-size: 95%;
-    height: 300px;
+    background-size: cover !important;
+    height: 400px !important;
 }
 
 .carousel-item {
