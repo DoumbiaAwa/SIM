@@ -10,12 +10,10 @@ export default function About() {
         </div>
         <div className="col-sm-6" >
           <p className='text-about'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis fugiat facilis voluptatum error itaque tempore vitae, saepe dolorem numquam dolorum alias temporibus modi nam nihil atque eos recusandae corporis eligendi?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non nam repellat quaerat optio, unde tempora. Earum, rem enim dolore eos vitae, aut, atque quasi consequatur adipisci vel non sequi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum, dolorem vero molestias et iure magni id expedita quibusdam ex assumenda! Vero, aperiam? Eveniet tempore iusto voluptates, nesciunt laboriosam temporibus!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia itaque dolore fugit natus molestiae iusto earum cupiditate porro id doloremque nam, tenetur nobis, nostrum laudantium nemo, unde beatae quaerat aliquid.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit eos omnis nobis ex sed totam optio, error debitis ad, veritatis impedit ipsam quasi, obcaecati doloremque blanditiis recusandae aperiam? Illum.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium beatae aut magnam ipsa dolore quisquam! Obcaecati necessitatibus et quod libero pariatur ipsam? Consequatur possimus neque, labore repellat aut sapiente.
+          Le système d’information des marchés en Guinée (SIM-Guinée) est un dispositif qui a pour objectif de collecter régulièrement les informations sur les produits alimentaires au niveau des marchés urbains et ruraux (marchés de collecte, de gros ou de détail). Ces informations concernent, les prix et les quantités commercialisées des produits alimentaires. Elles sont diffusées auprès des acteurs publics (Etats) et privés (producteurs agricoles, commerçants, consommateurs). Les informations diffusées permettent d’aider les acteurs dans leurs orientations et prises de décision.
+
+L’objectif principal de SIM-Guinée est de contribuer à alimenter les dispositifs publics de prévention de crise alimentaire (alerte en cas de forte hausse des prix, par exemple) en information actualisée pour permettre aux décideurs d’améliorer les prises de décisions, de définir, d’assurer le suivi et la mise en œuvre des politiques agricoles, commerciales et de la sécurité alimentaire et nutritionnelle.
+Il s’agit d’un dispositif bâti sur les acquis du Système d’Information sur les prix des produits agricoles (SIM-SIPAG), mis en place en 1993 par l’Etat Guinéen et la Communauté Economique Européenne (CEE). Il a bénéficié d’un appui de la Banque Mondiale à travers le Programme de Productivité Agricole Ouest Africaine (PPAAO) en 2018.  
           </p>
         </div>
       </div>
