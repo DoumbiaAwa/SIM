@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { PiCowFill } from "react-icons/pi";
 
 
 
@@ -175,16 +175,16 @@ useEffect(() => {
      <div className="container-fluid featurs py-5" >
 
       <div className="container py-5">
-<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{height: '300px'}}>
+<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{height: '200px'}}>
 <button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
 <br />
-<div className="carousel-inner" style={{marginTop: '80px'}}>
+<div className="carousel-inner" style={{marginTop: '20px'}}>
     <div className="carousel-item active">
         <div className="row g-4">
             {/* <!-- Intrant (Agricole) --> */}
             <div className="col-md-3">
                 <div className="featurs-item text-center rounded p-1" >
-                    <i className="fas fa-seedling fa-6x text-red"style={{ marginBottom: '20px' }}></i>
+                    <i className="fas fa-seedling fa-5x text-red"style={{ marginBottom: '20px' }}></i>
                     <div className="featurs-content text-center">
                         <h5>SIM Agricole</h5>
                     </div>
@@ -193,18 +193,20 @@ useEffect(() => {
 
             {/* <!-- Bétail --> */}
             <div className="col-md-3">
-                <div className="featurs-item text-center rounded p-1">
-                    <i className="fas fa-hippo fa-6x text-red" style={{ marginBottom: '20px' }}></i>
-                    <div className="featurs-content text-center">
-                        <h5>SIM Bétail</h5>
-                    </div>
-                </div>
-            </div>
+  <div className="featurs-item text-center rounded p-1">
+    {/* <i ></i> */}
+    <PiCowFill className="fas fa-cow fa-5x text-red" style={{ marginBottom: '20px' }}/>
+    <div className="featurs-content text-center">
+      <h5>SIM Bétail</h5>
+    </div>
+  </div>
+</div>
+
 
             {/* <!-- Pêche --> */}
             <div className="col-md-3">
                 <div className="featurs-item text-center rounded p-1">
-                    <i className="fas fa-fish fa-6x text-red" style={{ marginBottom: '20px' }}></i>
+                    <i className="fas fa-fish fa-5x text-red" style={{ marginBottom: '20px' }}></i>
                     <div className="featurs-content text-center">
                         <h5>SIM Pêche</h5>
                     </div>
@@ -214,7 +216,7 @@ useEffect(() => {
             {/* <!-- Intrant (Agricole) --> */}
             <div className="col-md-3">
                 <div className="featurs-item text-center rounded p-1">
-                    <i className="fas fa-tractor fa-6x text-red" style={{ marginBottom: '20px' }}></i>
+                    <i className="fas fa-truck fa-5x text-red" style={{ marginBottom: '20px' }}></i>
                     <div className="featurs-content text-center">
                         <h5>SIM Intrant</h5>
                     </div>
@@ -242,7 +244,7 @@ useEffect(() => {
     <div className="tab-class text-center">
       <div className="row g-4">
         <div className="col-lg-4 text-start">
-          <button type="button" className="btn btn-success">Familles Produits</button>
+          <button type="button" className="btn btn-success">Groupes Produits</button>
         </div>
         <div className="col-lg-8 text-end">
           <ul className="nav nav-pills d-inline-flex text-center mb-5">
@@ -252,11 +254,11 @@ useEffect(() => {
               </a>
             </li>
             {Array.from(new Set(familles.map(famille => famille.famille_produit)))
-              .slice(0, 4)
+              .slice(0, 3)
               .map((famille_produit, index) => (
                 <li className="nav-item" key={index}>
                   <a className="d-flex py-2 m-2 bg-vert rounded-pill" data-bs-toggle="pill" href={`#tab-${index}`}>
-                    <span className="text-dark" style={{ width: 130 }}>{famille_produit}</span>
+                    <span className="text-dark" style={{ width: 160, whiteSpace: 'nowrap' }}>{famille_produit}</span>
                   </a>
                 </li>
               ))}

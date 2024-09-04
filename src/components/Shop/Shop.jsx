@@ -146,7 +146,7 @@ const filteredFamilles = familles
                                             <div className="col-md-6 col-lg-6 col-xl-4" key={index}>
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
-                                                        <img src={famille.image} className="img-fluid w-100 rounded-top" alt={famille.nom_produit} style={{height: '160px'}} />
+                                                        <img src={famille.image} className="img-fluid w-100 rounded-top" alt={famille.nom_produit} style={{width: '500px', height:'250px' }} />
                                                     </div>
                                                     <div className="text-white bg-red px-3 py-1 rounded position-absolute" style={{ top: 10, left: 10 }}>{famille.nom_produit}</div>
                                                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">

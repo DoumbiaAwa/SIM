@@ -16,6 +16,7 @@ p{
 .text-dark{
     color: rgb(54, 159, 74) !important;
     font-weight: 700;
+    font-size: 15px;
 }
 .text-dar{
     background-color: red;
@@ -363,13 +364,13 @@ p{
     margin-left: 20px;
 }
 
-.page-header {
+/* .page-header {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./img/cart-page-header-img.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 @media (max-width: 480px) {
    .mb-5 {
     font-size: 25px !important;
