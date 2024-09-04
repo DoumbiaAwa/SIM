@@ -10,6 +10,7 @@ export default function Home() {
 
     const [accessToken, setAccessToken] = useState('');
     const [familles, setFamilles] = useState([]);
+    const [phares, setPhares] = useState([]);
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState(null); 
     
@@ -49,6 +50,17 @@ const fetchAccessToken = async () => {
       console.error('Erreur lors de la récupération des données:', error);
     }
   };
+// recuprer les produit phrares 
+useEffect(() => {
+  if (accessToken) {
+    fetchData('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/parametrages/produits/produits/les-plus-consommer')
+      .then(data => {
+        setPhares(data);
+        setLoading(false);
+      })
+      .catch(err => setError(err.message));
+  }
+  }, [accessToken]);
 
   // recuperer le nom des  familles de produit
   useEffect(() => {
@@ -60,10 +72,11 @@ const fetchAccessToken = async () => {
         })
         .catch(err => setError(err.message));
     }
-  }, [accessToken]);
+    }, [accessToken]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
+
 
   return (
     <div style={{marginBottom: '200px'}}>
@@ -85,6 +98,7 @@ const fetchAccessToken = async () => {
             </div>
         </div>
         {/* <!-- Modal Search End --> */}
+
 {/* <!-- Hero Start --> */}
         <div className="container-fluid py-5 mb-5 hero-header" style={{ maxWidth: '100%' }}>
             <div className="container py-5">
@@ -261,7 +275,7 @@ const fetchAccessToken = async () => {
                 <div key={index} className="col-md-6 col-lg-4 col-xl-3">
                   <div className="rounded position-relative fruite-item">
                     <div className="fruite-img">
-                      <img src={famille.image} className="img-fluid w-100 rounded-top" alt={famille.nom_produit} style={{height: '160px'}}/>
+                      <img src={famille.image} className="img-fluid w-100 rounded-top" alt={famille.nom_produit} style={{width: '500px', height:'250px' }}/>
                     </div>
                     <div className="text-white bg-color px-3 py-1 rounded position-absolute" style={{ top: 10, left: 10 }}>{famille.famille_produit}</div>
                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">
@@ -283,7 +297,7 @@ const fetchAccessToken = async () => {
                   <div key={subIndex} className="col-md-6 col-lg-4 col-xl-3">
                     <div className="rounded position-relative fruite-item">
                       <div className="fruite-img">
-                        <img src={famille.image} className="img-fluid w-100 rounded-top" alt={famille.nom_produit} style={{height: '160px'}} />
+                        <img src={famille.image} className="img-fluid w-100 rounded-top" alt={famille.nom_produit} style={{width: '500px', height:'250px' }} />
                       </div>
                       <div className="text-white bg-color px-3 py-1 rounded position-absolute" style={{ top: 10, left: 10 }}>{famille.famille_produit}</div>
                       <div className="p-4 border border-secondary border-top-0 rounded-bottom">
@@ -355,103 +369,29 @@ const fetchAccessToken = async () => {
                     {/* <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p> */}
                 </div>
                <br />
-                <div className="row g-4" >
-                    <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-vert">
-                            <div className="row align-items-center">
-                                <div className="col-6">
-                                    <img src={require ('./img/best-product-1.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
-                                </div>
-                                <div className="col-6">
-                                    <a href="#" className="h5">Organic Tomato</a>
-                                   
-                                    <h4 className="mb-3">300 GNF</h4>
-                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-vert">
-                            <div className="row align-items-center">
-                                <div className="col-6">
-                                    <img src={require ('./img/best-product-2.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
-                                </div>
-                                <div className="col-6">
-                                    <a href="#" className="h5">Organic Tomato</a>
-                                    
-                                    <h4 className="mb-3">300 GNF</h4>
-                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-vert">
-                            <div className="row align-items-center">
-                                <div className="col-6">
-                                    <img src={require ('./img/best-product-3.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
-                                </div>
-                                <div className="col-6">
-                                    <a href="#" className="h5">Organic Tomato</a>
-                                    
-                                    <h4 className="mb-3">300 GNF</h4>
-                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-vert">
-                            <div className="row align-items-center">
-                                <div className="col-6">
-                                    <img src={require ('./img/best-product-4.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
-                                </div>
-                                <div className="col-6">
-                                    <a href="#" className="h5">Organic Tomato</a>
-                                   
-                                    <h4 className="mb-3">300 GNF</h4>
-                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-vert">
-                            <div className="row align-items-center">
-                                <div className="col-6">
-                                    <img src={require ('./img/best-product-5.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
-                                </div>
-                                <div className="col-6">
-                                    <a href="#" className="h5">Organic Tomato</a>
-                                    
-                                    <h4 className="mb-3">300 GNF</h4>
-                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-xl-4">
-                        <div className="p-4 rounded bg-vert">
-                            <div className="row align-items-center">
-                                <div className="col-6">
-                                    <img src={require ('./img/best-product-1.jpg')} className="img-fluid rounded-circle w-100" alt=""/>
-                                </div>
-                                <div className="col-6">
-                                    <a href="#" className="h5">Organic Tomato</a>
-                                   
-                                   
-                                    <h4 className="mb-3">300 GNF</h4>
-                                    {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                   
-                    
-                  
-                </div>
+               <div className="row g-4">
+  {/* Affichage des produits phares, en limitant à 6 avec slice */}
+  {phares
+  .filter((produit) => produit.image)
+  .slice(0, 6).map((produit, index) => (
+    <div className="col-lg-6 col-xl-4" key={index}>
+      <div className="p-4 rounded bg-vert">
+        <div className="row align-items-center">
+          <div className="col-6">
+            <img src={produit.image} className="img-fluid rounded-circle w-100" alt={produit.nom_produit}  style={{ width: '150px', height: '150px', objectFit: 'cover' }}/>
+          </div>
+          <div className="col-6">
+            <a href="#" className="h5">{produit.nom_produit}</a>
+            {/* <h4 className="mb-3">300 GNF</h4> */}
+            {/* Bouton "Ajouter au panier" ou autre action */}
+            {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
             </div>
         </div>
         

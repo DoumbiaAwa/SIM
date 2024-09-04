@@ -13,7 +13,7 @@ export default function Shop_details() {
                             <div className="col-lg-6">
                                 <div className="border rounded">
                                     <a href="#">
-                                        <img  src={require('./img/single-item.jpg')}  className="img-fluid rounded" alt="Image"/>
+                                        {/* <img  src={require('./img/single-item.jpg')}  className="img-fluid rounded" alt="Image"/> */}
                                     </a>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ export default function Shop_details() {
                     <div className="owl-carousel vegetable-carousel justify-content-center">
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img  src={require('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
+                                {/* <img  src={require('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
@@ -50,7 +50,7 @@ export default function Shop_details() {
                         </div>
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img  src={require('./img/vegetable-item-1.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
+                                {/* <img  src={require('./img/vegetable-item-1.jpg')} className="img-fluid w-100 rounded-top" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
@@ -64,7 +64,7 @@ export default function Shop_details() {
                         </div>
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img src={require('./img/vegetable-item-4.jpg')}  className="img-fluid w-100 rounded-top bg-light" alt=""/>
+                                {/* <img src={require('./img/vegetable-item-4.jpg')}  className="img-fluid w-100 rounded-top bg-light" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
@@ -78,7 +78,7 @@ export default function Shop_details() {
                         </div>
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img src={require('./img/vegetable-item-4.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
+                                {/* <img src={require('./img/vegetable-item-4.jpg')} className="img-fluid w-100 rounded-top" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
@@ -92,7 +92,7 @@ export default function Shop_details() {
                         </div>
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img src={require('./img/vegetable-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
+                                {/* <img src={require('./img/vegetable-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
@@ -106,7 +106,7 @@ export default function Shop_details() {
                         </div>
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img src={require('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
+                                {/* <img src={require('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
@@ -120,7 +120,7 @@ export default function Shop_details() {
                         </div>
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img src={require('./img/vegetable-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
+                                {/* <img src={require('./img/vegetable-item-5.jpg')} className="img-fluid w-100 rounded-top" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
@@ -134,7 +134,7 @@ export default function Shop_details() {
                         </div>
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
-                                <img src={require('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/>
+                                {/* <img src={require('./img/vegetable-item-6.jpg')} className="img-fluid w-100 rounded-top" alt=""/> */}
                             </div>
                             <div className="text-white bg-primary px-3 py-1 rounded position-absolute" style= {{top: 10, right: 10}}>Vegetable</div>
                             <div className="p-4 pb-0 rounded-bottom">
