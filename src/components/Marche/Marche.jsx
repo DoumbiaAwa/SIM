@@ -11,8 +11,13 @@ export default function Marche() {
   const [marches, setMarches] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [accessToken, setAccessToken] = useState('');
+
   const [page, setPage] = useState(0); // État pour la page
   const [limit, setLimit] = useState(100); // État pour la limite
+
+  const location = useLocation();
+  const magasin = location.state;
+
   const fetchAccessToken = async () => {
     try {
       const response = await fetch('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/login', {
@@ -63,7 +68,6 @@ export default function Marche() {
       });
     }
   }, [accessToken, page, limit]);
-  
 
   const isValidCoord = (latitude, longitude) => {
     return (
@@ -75,18 +79,21 @@ export default function Marche() {
   };
 
   const defaultPosition = [10.8199236, -14.8981006]; // Guinea coordinates
-  const position = marche && isValidCoord(marche.latitude, marche.longitude)
-    ? [marche.latitude, marche.longitude]
+  const position = magasin && isValidCoord(magasin.latitude, magasin.longitude)
+    ? [magasin.latitude, magasin.longitude]
     : defaultPosition;
 
   const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1591037.7366769485!2d${position[1]}!3d${position[0]}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1675c59517c9f%3A0x118c9b7b6e7bb788!2sGuinea!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd`;
 
- 
+  const filteredItems = marches.filter(marche =>
+    marche.nom_marche.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div style={{ marginTop: 150, marginBottom: 300, justifyContent: 'center' }}>
       <div className='titre'>
         <br />
-        <h3 className='mar'>Trouvez rapidement ce que vous cherchez  par  Marché suivi <i className='fas fa-search'></i></h3>
+        <h3 className='mar'>Trouvez rapidement ce que vous cherchez en filtrant par marché <i className='fas fa-search'></i></h3>
       </div>
 
       <div className="row">
@@ -135,33 +142,24 @@ export default function Marche() {
           </div> */}
         </div>
 
-        <div className="col-md-9">
+        <div className="col-md-8">
           <div className="input-group" style={{ width: '500px' }}>
             <input
               type="text"
               className="form-control"
-              placeholder="Search for items..."
+              placeholder="Search for markets..."
               aria-label="Search"
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
             />
-            {/* <select
-              className="form-select"
-              aria-label="Filter by"
-              value={filter}
-              onChange={e => setFilter(e.target.value)}
-            > */}
-              {/* <option value="marche">Marché</option>
-              <option value="magasin">Magasin</option> */}
-            {/* </select> */}
           </div>
           <br />
           <div className="d-flex flex-wrap justify-content-start gap-5">
-            {marches.map((item) => (
+            {filteredItems.map((marche) => (
               <Link
-                to={filter === 'marche' ? `/marche-details/${item.id_marche}` : `/magasin-details/${item.id_magasin}`}
-                state={filter === 'marche' ? { marche: item } : { magasin: item }}
-                key={filter === 'marche' ? item.id_marche : item.id_magasin}
+                to={`/marche-details/${marche.id_marche}`}
+                state={{ marche: marche, marches }}
+                key={marche.id_marche}
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
                 <motion.div
@@ -172,8 +170,8 @@ export default function Marche() {
                 >
                   <div className="card-body">
                     <img src={require('./img/market-icon.jpeg')} alt="" />
-                    <h5 className="card-title">{filter === 'marche' ? item.nom_marche : item.nom_magasin}</h5>
-                    <p className="card-text">{item.description}</p>
+                    <h5 className="card-title">{marche.nom_marche}</h5>
+                    {/* <p className="card-text">{marche.description}</p> */}
                   </div>
                 </motion.div>
               </Link>

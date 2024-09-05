@@ -3,3 +3,33 @@
     width: 100%;
   }
    */
+   .fruite-categorie {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .marche-item {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .marche-item:hover {
+    background-color: #2a790d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .marche-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .marche-item a:hover {
+    color: #007bff;
+  }
+  

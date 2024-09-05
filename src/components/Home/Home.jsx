@@ -80,8 +80,10 @@ useEffect(() => {
 
   return (
     <div style={{marginBottom: '200px'}}>
-       {/* /* <!-- Modal Search Start --> */} */
-        <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div>
+
+          {/* /* <!-- Modal Search Start --> */} */
+          <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-fullscreen">
                 <div className="modal-content rounded-0">
                     <div className="modal-header">
@@ -103,7 +105,7 @@ useEffect(() => {
         <div className="container-fluid py-5 mb-5 hero-header" style={{ maxWidth: '100%' }}>
             <div className="container py-5">
                 <div className="row g-5 align-items-center">
-                    <div className="col-md-12 col-lg-7">
+                    <div className="col-md-12 col-lg-7" style={{marginTop:'20px'}}>
                         <h4 className="mb-3 text">100% Agro-pastoral</h4>
                         <h1 className="mb-5 display-3 text-primary" style={{ fontSize: '2.5rem',textAlign: 'left' }}>Système d'Information sur les Marchés en Guinée</h1>
                         <div className="position-relative mx-auto">
@@ -111,7 +113,7 @@ useEffect(() => {
                             <button type="submit" className="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style={{ top: '0', right: '25%' }}>Rechercher</button>
                         </div>
                     </div>
-                            <div className="col-md-12 col-lg-5">
+                            <div className="col-md-12 col-lg-5" style={{marginTop:'20px'}}>
                         <div id="carouselId" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
                                 <div className="carousel-item active rounded">
@@ -169,73 +171,61 @@ useEffect(() => {
             </div>
         </div>
         {/* <!-- Hero End --> */}
+      </div>
+     
 
 
         {/* <!-- categorie Section Start --> */}
-     <div className="container-fluid featurs py-5" >
+        <div className="container-fluid featurs py-5" style={{ height: '200px', display: 'flex', flexWrap: 'wrap' }}>
+  <div className="container py-5">
+    <button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
+    <br />
+    {/* Ajout de d-flex et de classes d'espacement pour l'alignement horizontal */}
+    <div className="d-flex flex-wrap justify-content-around">
+      {/* <!-- Intrant (Agricole) --> */}
+      <Link to="/categorie" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div className="featurs-item text-center rounded p-3">
+          <i className="fas fa-seedling fa-5x text-red" style={{ marginBottom: '20px' }}></i>
+          <div className="featurs-content text-center">
+            <h5>SIM Agricole</h5>
+          </div>
+        </div>
+      </Link>
 
-      <div className="container py-5">
-<div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{height: '200px'}}>
-<button type="button" className="btn btn-danger">Découvrez nos Catégories de produits</button>
-<br />
-<div className="carousel-inner" style={{marginTop: '20px'}}>
-    <div className="carousel-item active">
-        <div className="row g-4">
-            {/* <!-- Intrant (Agricole) --> */}
-            <div className="col-md-3">
-                <div className="featurs-item text-center rounded p-1" >
-                    <i className="fas fa-seedling fa-5x text-red"style={{ marginBottom: '20px' }}></i>
-                    <div className="featurs-content text-center">
-                        <h5>SIM Agricole</h5>
-                    </div>
-                </div>
-            </div>
+      {/* <!-- Bétail --> */}
+      <Link to="/categorie" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div className="featurs-item text-center rounded p-3">
+          <PiCowFill className="fas fa-cow fa-5x text-red" style={{ marginBottom: '20px' }} />
+          <div className="featurs-content text-center">
+            <h5>SIM Bétail</h5>
+          </div>
+        </div>
+      </Link>
 
-            {/* <!-- Bétail --> */}
-            <div className="col-md-3">
-  <div className="featurs-item text-center rounded p-1">
-    {/* <i ></i> */}
-    <PiCowFill className="fas fa-cow fa-5x text-red" style={{ marginBottom: '20px' }}/>
-    <div className="featurs-content text-center">
-      <h5>SIM Bétail</h5>
+      {/* <!-- Pêche --> */}
+      <Link to="/categorie" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div className="featurs-item text-center rounded p-3">
+          <i className="fas fa-fish fa-5x text-red" style={{ marginBottom: '20px' }}></i>
+          <div className="featurs-content text-center">
+            <h5>SIM Pêche</h5>
+          </div>
+        </div>
+      </Link>
+
+      {/* <!-- Intrant (Transport) --> */}
+      <Link to="/categorie" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div className="featurs-item text-center rounded p-3">
+          <i className="fas fa-truck fa-5x text-red" style={{ marginBottom: '20px' }}></i>
+          <div className="featurs-content text-center">
+            <h5>SIM Intrant</h5>
+          </div>
+        </div>
+      </Link>
     </div>
   </div>
 </div>
 
 
-            {/* <!-- Pêche --> */}
-            <div className="col-md-3">
-                <div className="featurs-item text-center rounded p-1">
-                    <i className="fas fa-fish fa-5x text-red" style={{ marginBottom: '20px' }}></i>
-                    <div className="featurs-content text-center">
-                        <h5>SIM Pêche</h5>
-                    </div>
-                </div>
-            </div>
-
-            {/* <!-- Intrant (Agricole) --> */}
-            <div className="col-md-3">
-                <div className="featurs-item text-center rounded p-1">
-                    <i className="fas fa-truck fa-5x text-red" style={{ marginBottom: '20px' }}></i>
-                    <div className="featurs-content text-center">
-                        <h5>SIM Intrant</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {/* <!-- Répétez les blocs pour chaque groupe de 4 cartes --> */}
-</div>
-
-  
-  
- 
-</div>
-
-        
-      </div>
-    </div>
       {/* <!-- categorie Section end--> */}
 
     {/* <!-- Famille produit debut--> */}
