@@ -3,21 +3,19 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Marche.css';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import 'leaflet-defaulticon-compatibility';
 
-export default function Marche() {
+export default function Marche() { 
   const [marches, setMarches] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [regions, setRegions] = useState([]);  // Correct initialization
+  const [selectedRegion, setSelectedRegion] = useState('');  // Separate state for selected region
   const [accessToken, setAccessToken] = useState('');
-
-  const [page, setPage] = useState(0); // État pour la page
-  const [limit, setLimit] = useState(100); // État pour la limite
-
   const location = useLocation();
   const magasin = location.state;
 
+  // Fetch Access Token
   const fetchAccessToken = async () => {
     try {
       const response = await fetch('https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/login', {
@@ -29,7 +27,7 @@ export default function Marche() {
           "username": "Awa",
           "password": "2002"
         })
-      });
+      });  
       const data = await response.json();
       setAccessToken(data.access_token);
     } catch (error) {
@@ -51,23 +49,39 @@ export default function Marche() {
       return await response.json();
     } catch (error) {
       console.error('Erreur lors de la récupération des données:', error);
+      return null;
     }
   };
 
-  // Fetch markets
+  // Fetch Regions
   useEffect(() => {
     if (accessToken) {
-      const url = `https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/parametrages/marches/pagination/par-page?page=${page}&limit=${limit}`;
+      const url = `https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/parametrages/localites/regions`;
       fetchData(url).then(data => {
-        if (data && Array.isArray(data.data)) {
-          setMarches(data.data); // Correctly set the marches state
+        if (data && Array.isArray(data)) {
+          setRegions(data); 
         } else {
-          console.error('Expected marches to be an array, but got:', data);
-          setMarches([]); // Fallback to an empty array
+          console.error('Expected regions to be an array, but got:', data);
+          setRegions([]); 
         }
       });
     }
-  }, [accessToken, page, limit]);
+  }, [accessToken]);
+
+  // Fetch Marches
+  useEffect(() => {
+    if (accessToken) {
+      const url = `https://cors-proxy.fringe.zone/http://92.112.194.154:8000/api/parametrages/marches/marche/listes`;
+      fetchData(url).then(data => {
+        if (data && Array.isArray(data)) {
+          setMarches(data); 
+        } else {
+          console.error('Expected marches to be an array, but got:', data);
+          setMarches([]); 
+        }
+      });
+    }
+  }, [accessToken]);
 
   const isValidCoord = (latitude, longitude) => {
     return (
@@ -85,15 +99,17 @@ export default function Marche() {
 
   const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1591037.7366769485!2d${position[1]}!3d${position[0]}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1675c59517c9f%3A0x118c9b7b6e7bb788!2sGuinea!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd`;
 
+  // Filter marches by search term and selected region
   const filteredItems = marches.filter(marche =>
-    marche.nom_marche.toLowerCase().includes(searchTerm.toLowerCase())
+    marche.nom_marche.toLowerCase().includes(searchTerm.toLowerCase()) &&
+    (selectedRegion === '' || marche.nom_region === selectedRegion)
   );
 
   return (
     <div style={{ marginTop: 150, marginBottom: 300, justifyContent: 'center' }}>
       <div className='titre'>
         <br />
-        <h3 className='mar'>Trouvez rapidement ce que vous cherchez en filtrant par marché <i className='fas fa-search'></i></h3>
+        <h3 className='mar'>Trouvez rapidement ce que vous cherchez en filtrant par région <i className='fas fa-search'></i></h3>
       </div>
 
       <div className="row">
@@ -106,40 +122,6 @@ export default function Marche() {
             referrerPolicy="no-referrer-when-downgrade">
           </iframe>
           <br />
-          {/* <div className="mb-3 g-2">
-            <br />
-            <h4>Categories</h4>
-
-            <ul className="list-unstyled fruite-categorie">
-              <li>
-                <div className="d-flex justify-content-between fruite-name">
-                  <a href="#"><i className="fas fa-apple-alt me-2"></i>Agricole</a>
-                  <span>(3)</span>
-                </div>
-              </li>
-              <br />
-              <li>
-                <div className="d-flex justify-content-between fruite-name">
-                  <a href="#"><i className="fas fa-apple-alt me-2"></i>Bétail</a>
-                  <span>(5)</span>
-                </div>
-              </li>
-              <br />
-              <li>
-                <div className="d-flex justify-content-between fruite-name">
-                  <a href="#"><i className="fas fa-apple-alt me-2"></i> Pêche</a>
-                  <span>(2)</span>
-                </div>
-              </li>
-              <br />
-              <li>
-                <div className="d-flex justify-content-between fruite-name">
-                  <a href="#"><i className="fas fa-apple-alt me-2"></i>Intrant</a>
-                  <span>(8)</span>
-                </div>
-              </li>
-            </ul>
-          </div> */}
         </div>
 
         <div className="col-md-8">
@@ -147,11 +129,23 @@ export default function Marche() {
             <input
               type="text"
               className="form-control"
-              placeholder="Search for markets..."
+              placeholder="Recherche"
               aria-label="Search"
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
             />
+            {/* Ajouter un filtre de région */}
+            <select 
+              className="form-select"
+              value={selectedRegion}
+              onChange={e => setSelectedRegion(e.target.value)}
+              style={{ marginLeft: '10px', color:'', backgroundColor:'white'}}
+            >
+              <option value="">Toutes les régions</option>
+              {regions.map((region, index) => (
+                <option key={index} value={region.nom_region}>{region.nom_region}</option>
+              ))}
+            </select>
           </div>
           <br />
           <div className="d-flex flex-wrap justify-content-start gap-5">
@@ -171,7 +165,6 @@ export default function Marche() {
                   <div className="card-body">
                     <img src={require('./img/market-icon.jpeg')} alt="" />
                     <h5 className="card-title">{marche.nom_marche}</h5>
-                    {/* <p className="card-text">{marche.description}</p> */}
                   </div>
                 </motion.div>
               </Link>

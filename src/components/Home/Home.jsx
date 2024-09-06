@@ -227,7 +227,7 @@ useEffect(() => {
 
 
       {/* <!-- categorie Section end--> */}
-
+<br />
     {/* <!-- Famille produit debut--> */}
     <div className="container-fluid fruite py-5">
   <div className="container py-5">
@@ -353,7 +353,7 @@ useEffect(() => {
     </div>
             {/* <!-- marche pub  Section--> */}    
 
-        {/* <!-- Bestsaler Product Start --> */}
+        {/* <!-- Product phare --> */}
         <div className="container-fluid py-5" style={{marginTop: 60}}>
             <div className="container py-5">
                 <div className="text-center mx-auto mb-5" style= {{maxwidth: 1000}}>
@@ -374,15 +374,14 @@ useEffect(() => {
           </div>
           <div className="col-6">
             <a href="#" className="h5">{produit.nom_produit}</a>
-            {/* <h4 className="mb-3">300 GNF</h4> */}
-            {/* Bouton "Ajouter au panier" ou autre action */}
-            {/* <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a> */}
+            
           </div>
         </div>
       </div>
     </div>
   ))}
 </div>
+{/* <button type="button" className="btn btn-danger">Voir plus</button> */}
 
             </div>
         </div>
